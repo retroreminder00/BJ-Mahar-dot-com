@@ -3,9 +3,6 @@
    Colorado Modern Americana
    ========================================================= */
 
-
-/* ---------- RESET ---------- */
-
 *,
 *::before,
 *::after {
@@ -16,12 +13,30 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --cream: #f1eadb;
+  --cream-light: #f8f4ea;
+  --ink: #18241f;
+  --green: #203c33;
+  --green-dark: #142b24;
+  --rust: #a5472f;
+  --gold: #b68b52;
+  --white: #fffdf8;
+
+  --page-width: 1280px;
+  --header-height: 86px;
+}
+
 body {
   margin: 0;
-  background: #f1eadb;
-  color: #1d2925;
+  background: var(--cream);
+  color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 img {
@@ -42,22 +57,8 @@ textarea {
 
 
 /* =========================================================
-   COLOR / TYPE SYSTEM
+   TYPOGRAPHY
    ========================================================= */
-
-:root {
-  --cream: #f1eadb;
-  --cream-light: #f8f4ea;
-  --ink: #18241f;
-  --green: #203c33;
-  --green-dark: #142b24;
-  --rust: #a5472f;
-  --gold: #b68b52;
-  --white: #fffdf8;
-
-  --page-width: 1280px;
-  --header-height: 86px;
-}
 
 h1,
 h2,
@@ -145,6 +146,7 @@ p {
   justify-content: space-between;
 
   color: var(--white);
+
   transition:
     background 0.3s ease,
     box-shadow 0.3s ease,
@@ -199,8 +201,8 @@ p {
   left: 0;
 
   height: 2px;
-
   background: var(--white);
+
   content: "";
   transform: scaleX(0);
   transform-origin: right;
@@ -231,6 +233,7 @@ p {
 
 /* =========================================================
    HERO
+   Temporary hero until cinematic BJ entrance is built
    ========================================================= */
 
 .hero {
@@ -243,11 +246,6 @@ p {
   overflow: hidden;
   color: var(--white);
 
-  /*
-     HERO IMAGE:
-     Later we'll replace this gradient with the finished
-     BJ + Pikes Peak image / animated hero.
-  */
   background:
     linear-gradient(
       90deg,
@@ -360,7 +358,7 @@ p {
 
 
 /* =========================================================
-   SPLIT STORY SECTIONS
+   BUYING + SELLING
    ========================================================= */
 
 .split-section {
@@ -386,34 +384,25 @@ p {
   min-height: 700px;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .image-buying {
-  background:
+  background-image:
     linear-gradient(
-      rgba(30, 50, 42, 0.12),
-      rgba(30, 50, 42, 0.12)
+      rgba(18, 36, 29, 0.05),
+      rgba(18, 36, 29, 0.05)
     ),
-    linear-gradient(
-      145deg,
-      #8c9b82,
-      #d0b58e 45%,
-      #6e796a
-    );
+    url("images/buying.jpg");
 }
 
 .image-selling {
-  background:
+  background-image:
     linear-gradient(
-      rgba(30, 50, 42, 0.1),
-      rgba(30, 50, 42, 0.1)
+      rgba(18, 36, 29, 0.06),
+      rgba(18, 36, 29, 0.06)
     ),
-    linear-gradient(
-      145deg,
-      #b7a37f,
-      #755b45 50%,
-      #38483e
-    );
+    url("images/selling.jpg");
 }
 
 .story-content {
@@ -449,7 +438,7 @@ p {
 
 
 /* =========================================================
-   FULL SCREEN FEATURES
+   CINEMATIC FEATURE SECTIONS
    ========================================================= */
 
 .feature-section {
@@ -464,48 +453,21 @@ p {
 
   background-position: center;
   background-size: cover;
-}
-
-.feature-food {
-  background:
-    linear-gradient(
-      120deg,
-      #2a211c,
-      #8c4c32 45%,
-      #bf8652
-    );
-}
-
-.feature-outdoors {
-  background:
-    linear-gradient(
-      120deg,
-      #1e382f,
-      #617c68 45%,
-      #9c825e
-    );
-}
-
-.feature-history {
-  background:
-    linear-gradient(
-      120deg,
-      #272b26,
-      #6c6756 45%,
-      #a08a69
-    );
+  background-repeat: no-repeat;
 }
 
 .feature-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
 
   background:
     linear-gradient(
       90deg,
-      rgba(12, 24, 20, 0.78) 0%,
-      rgba(12, 24, 20, 0.42) 55%,
-      rgba(12, 24, 20, 0.15) 100%
+      rgba(10, 22, 18, 0.78) 0%,
+      rgba(10, 22, 18, 0.42) 42%,
+      rgba(10, 22, 18, 0.08) 72%,
+      rgba(10, 22, 18, 0.18) 100%
     );
 }
 
@@ -528,6 +490,66 @@ p {
 .feature-subtitle {
   font-style: italic;
 }
+
+
+/* =========================================================
+   FOOD
+   ========================================================= */
+
+.feature-food {
+  background-image: url("images/food.jpg");
+  background-position: center center;
+}
+
+/*
+   The approved Food artwork already contains typography.
+   Hide the duplicate HTML copy while preserving it in the DOM.
+*/
+.feature-food .feature-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   OUTDOORS
+   ========================================================= */
+
+.feature-outdoors {
+  background-image: url("images/outdoors.jpg");
+  background-position: center center;
+}
+
+/*
+   Approved fishing artwork includes the visual copy.
+*/
+.feature-outdoors .feature-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HISTORY
+   ========================================================= */
+
+.feature-history {
+  background-image: url("images/history.jpg");
+  background-position: center center;
+}
+
+/*
+   Approved then/now artwork includes the visual copy.
+*/
+.feature-history .feature-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CATEGORY CHIPS
+   ========================================================= */
 
 .category-row {
   display: flex;
@@ -662,7 +684,6 @@ p {
 .question-grid a::after {
   position: absolute;
   right: 5px;
-
   content: "→";
   color: var(--rust);
 }
@@ -741,7 +762,6 @@ p {
 .resource-list a::after {
   position: absolute;
   right: 10px;
-
   content: "→";
   color: #d9b984;
 }
@@ -752,7 +772,7 @@ p {
 
 
 /* =========================================================
-   ABOUT
+   ABOUT BJ
    ========================================================= */
 
 .about-section {
@@ -762,20 +782,16 @@ p {
 .about-image {
   min-height: 750px;
 
-  /*
-     Placeholder until we add your actual portrait.
-  */
-  background:
+  background-image:
     linear-gradient(
-      rgba(31, 54, 45, 0.1),
-      rgba(31, 54, 45, 0.1)
+      rgba(31, 54, 45, 0.05),
+      rgba(31, 54, 45, 0.05)
     ),
-    linear-gradient(
-      145deg,
-      #87918a,
-      #c0ad90 45%,
-      #45574e
-    );
+    url("images/about-bj.jpg");
+
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -917,12 +933,12 @@ p {
 
 /* =========================================================
    SCROLL REVEALS
-   Added by script.js
    ========================================================= */
 
 .reveal {
   opacity: 0;
   transform: translateY(45px);
+
   transition:
     opacity 0.8s ease,
     transform 0.8s ease;
@@ -1017,7 +1033,7 @@ p {
   }
 
 
-  /* Sections */
+  /* General sections */
 
   .intro-section,
   .neighborhood-section,
@@ -1047,8 +1063,15 @@ p {
   }
 
   .feature-section {
-    min-height: 85vh;
-    padding: 100px 25px;
+    min-height: 62vw;
+    padding: 80px 25px;
+    background-size: cover;
+  }
+
+  .feature-food,
+  .feature-outdoors,
+  .feature-history {
+    background-position: center;
   }
 
   .question-grid {
@@ -1096,6 +1119,19 @@ p {
   .cta-row .button {
     width: 100%;
     text-align: center;
+  }
+
+  /*
+     The generated feature artwork is wide.
+     On phones we show as much of the full composition as possible.
+  */
+
+  .feature-food,
+  .feature-outdoors,
+  .feature-history {
+    min-height: 72vw;
+    background-size: cover;
+    background-position: center;
   }
 }
 
