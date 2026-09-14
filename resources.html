@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Colorado Springs resources curated by BJ Mahar — GIS maps, zoning, planning, property records, taxes, mining maps, historical research, real estate data and local vendors."
+  />
+
+  <title>Colorado Springs Resources | BJ Mahar</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+
+    /* =====================================================
+       RESOURCES PAGE
+       ===================================================== */
+
+    body.resources-page {
+      background: #f2ecdf;
+    }
+
+    .resources-page .site-header {
+      background: rgba(29, 48, 41, 0.97);
+    }
+
+    .resources-hero {
+      padding: 155px 0 90px;
+      background: #203a31;
+      color: #fffdf8;
+    }
+
+    .resources-hero-inner {
+      max-width: 930px;
+    }
+
+    .resources-hero .eyebrow {
+      color: #d6bd99;
+    }
+
+    .resources-hero h1 {
+      max-width: 850px;
+      margin-bottom: 24px;
+      font-size: clamp(3rem, 6vw, 6.2rem);
+      font-weight: 600;
+    }
+
+    .resources-hero p:not(.eyebrow) {
+      max-width: 720px;
+      margin-bottom: 0;
+      color: rgba(255,255,255,0.82);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.1rem, 1.7vw, 1.4rem);
+      line-height: 1.5;
+    }
+
+    .resource-jump {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(35,48,43,0.12);
+      background: #faf7f0;
+    }
+
+    .resource-jump-inner {
+      display: flex;
+      gap: 12px 22px;
+      flex-wrap: wrap;
+    }
+
+    .resource-jump a {
+      color: #38443f;
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .resource-jump a:hover {
+      color: #9a513b;
+    }
+
+    .resource-category {
+      padding: 82px 0;
+    }
+
+    .resource-category:nth-of-type(even) {
+      background: #faf7f0;
+    }
+
+    .resource-category:nth-of-type(odd) {
+      background: #f2ecdf;
+    }
+
+    .resource-category-heading {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+      margin-bottom: 42px;
+      align-items: start;
+    }
+
+    .resource-category-heading h2 {
+      margin-bottom: 0;
+    }
+
+    .resource-category-heading p {
+      max-width: 650px;
+      margin-bottom: 0;
+      color: #4b5752;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid rgba(35,48,43,0.16);
+    }
+
+    .resource-item {
+      position: relative;
+      padding: 28px 28px 30px 0;
+      border-bottom: 1px solid rgba(35,48,43,0.16);
+    }
+
+    .resource-item:nth-child(odd) {
+      padding-right: 42px;
+      border-right: 1px solid rgba(35,48,43,0.16);
+    }
+
+    .resource-item:nth-child(even) {
+      padding-left: 42px;
+    }
+
+    .resource-item .resource-type {
+      display: block;
+      margin-bottom: 8px;
+      color: #9a513b;
+      font-size: 0.59rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .resource-item h3 {
+      margin-bottom: 10px;
+      font-size: clamp(1.35rem, 2vw, 1.85rem);
+    }
+
+    .resource-item p {
+      max-width: 520px;
+      margin-bottom: 17px;
+      color: #4b5752;
+      font-size: 0.93rem;
+    }
+
+    .resource-item a {
+      display: inline-block;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #9a513b;
+      color: #9a513b;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .bj-take-box {
+      margin-top: 16px;
+      padding: 13px 15px;
+      border-left: 3px solid #b28d5d;
+      background: rgba(255,255,255,0.32);
+    }
+
+    .bj-take-box strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #9a513b;
+      font-size: 0.59rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .bj-take-box p {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.9rem;
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .under-house {
+      padding: 78px 0;
+      background: #30483f;
+      color: #fffdf8;
+    }
+
+    .under-house-inner {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .under-house .eyebrow {
+      color: #d6bd99;
+    }
+
+    .under-house h2 {
+      max-width: 520px;
+    }
+
+    .under-house-copy > p {
+      max-width: 700px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .under-house-links {
+      display: grid;
+      margin-top: 30px;
+      gap: 1px;
+      background: rgba(255,255,255,0.14);
+    }
+
+    .under-house-links a {
+      display: flex;
+      padding: 18px 20px;
+      justify-content: space-between;
+      gap: 20px;
+      background: #294038;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+    }
+
+    .under-house-links a:hover {
+      background: #344f45;
+    }
+
+    .resource-note {
+      margin-top: 24px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.76rem;
+    }
+
+    .vendors-section {
+      padding: 82px 0;
+      background: #faf7f0;
+    }
+
+    .vendors-intro {
+      max-width: 680px;
+      margin-bottom: 42px;
+    }
+
+    .vendors-intro p {
+      color: #4b5752;
+    }
+
+    .vendor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .vendor-card {
+      min-height: 170px;
+      padding: 24px;
+      border: 1px solid rgba(35,48,43,0.12);
+      background: #f2ecdf;
+    }
+
+    .vendor-card span {
+      display: block;
+      margin-bottom: 10px;
+      color: #9a513b;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .vendor-card h3 {
+      margin-bottom: 9px;
+      font-size: 1.35rem;
+    }
+
+    .vendor-card p {
+      margin-bottom: 0;
+      color: #4b5752;
+      font-size: 0.88rem;
+    }
+
+    .resources-bottom {
+      padding: 82px 0;
+      background: #a0523a;
+      color: #fffdf8;
+      text-align: center;
+    }
+
+    .resources-bottom-inner {
+      max-width: 750px;
+    }
+
+    .resources-bottom .eyebrow {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .resources-bottom p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      color: rgba(255,255,255,0.86);
+    }
+
+    .resources-bottom a {
+      display: inline-block;
+      padding: 13px 20px;
+      border: 1px solid rgba(255,255,255,0.7);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 850px) {
+
+      .resource-category-heading,
+      .under-house-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .vendor-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 700px) {
+
+      .resources-hero {
+        padding: 125px 0 65px;
+      }
+
+      .resources-hero h1 {
+        font-size: clamp(2.7rem, 14vw, 4rem);
+      }
+
+      .resource-category,
+      .vendors-section {
+        padding: 62px 0;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-item,
+      .resource-item:nth-child(odd),
+      .resource-item:nth-child(even) {
+        padding: 24px 0;
+        border-right: 0;
+      }
+
+      .under-house {
+        padding: 62px 0;
+      }
+
+      .vendor-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-jump-inner {
+        gap: 9px 16px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body class="resources-page">
+
+  <header class="site-header scrolled">
+
+    <a class="brand" href="index.html">
+      <span class="brand-name">BJ MAHAR</span>
+      <span class="brand-city">COLORADO SPRINGS</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="site-nav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav">
+
+      <a href="index.html#real-estate">
+        Real Estate
+      </a>
+
+      <a href="index.html#explore">
+        Explore COS
+      </a>
+
+      <a href="index.html#neighborhoods">
+        Neighborhoods
+      </a>
+
+      <a href="resources.html" class="nav-resource">
+        Resources
+      </a>
+
+      <a href="index.html#about">
+        About BJ
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="resources-hero">
+
+      <div class="section-inner resources-hero-inner">
+
+        <p class="eyebrow">
+          COLORADO SPRINGS RESOURCE GUIDE
+        </p>
+
+        <h1>
+          Need to figure something out?
+        </h1>
+
+        <p>
+          These are the maps, databases, government sites,
+          historical records and local people I use when
+          I'm trying to answer a Colorado Springs property question.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUICK JUMP -->
+
+    <nav class="resource-jump">
+
+      <div class="section-inner resource-jump-inner">
+
+        <a href="#maps">Maps & GIS</a>
+        <a href="#city">City Resources</a>
+        <a href="#county">County Resources</a>
+        <a href="#property">Property Research</a>
+        <a href="#history">History & Archives</a>
+        <a href="#underground">What's Under My House?</a>
+        <a href="#vendors">Vendor List</a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- MAPS & GIS -->
+
+    <section id="maps" class="resource-category">
+
+      <div class="section-inner">
+
+        <div class="resource-category-heading">
+
+          <div>
+            <p class="eyebrow">MAPS & GIS</p>
+            <h2>Show me the map.</h2>
+          </div>
+
+          <p>
+            Parcel lines, zoning, development projects, subdivisions,
+            geology and the other layers that can tell you a whole lot
+            more about a property than a listing ever will.
+          </p>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+          <article class="resource-item">
+
+            <span class="resource-type">City GIS</span>
+
+            <h3>SpringsView</h3>
+
+            <p>
+              Search a Colorado Springs address or tax schedule number
+              and explore zoning, subdivisions, land records and other
+              city GIS layers.
+            </p>
+
+            <a
+              href="https://experience.arcgis.com/experience/ae84852f373b43baa3c4a6934e3d742e"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open SpringsView →
+            </a>
+
+            <div class="bj-take-box">
+              <strong>BJ'S TAKE</strong>
+              <p>
+                If I'm trying to figure out what a property is zoned
+                or what's around it, this is one of my first stops.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">County Property Map</span>
+
+            <h3>El Paso County Assessor Property Search</h3>
+
+            <p>
+              Search parcels by address, owner or parcel number.
+              See ownership, lot information, assessed value,
+              property characteristics and mapping.
+            </p>
+
+            <a
+              href="https://property.spatialest.com/co/elpaso"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Search a Property →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Development Map</span>
+
+            <h3>Colorado Springs Development Tracker</h3>
+
+            <p>
+              See development applications currently under review or
+              recently approved in Colorado Springs and explore projects
+              by location.
+            </p>
+
+            <a
+              href="https://coloradosprings.gov/developmenttracker"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Track Development →
+            </a>
+
+            <div class="bj-take-box">
+              <strong>BJ'S TAKE</strong>
+              <p>
+                Wondering what's going in behind your house?
+                Start here.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Geology GIS</span>
+
+            <h3>Colorado Geological Survey Map Portal</h3>
+
+            <p>
+              A huge collection of Colorado geology, groundwater,
+              mining and hazard-related GIS maps and datasets.
+            </p>
+
+            <a
+              href="https://coloradogeologicalsurvey.org/geology/gis-data-map-portal/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Geological Maps →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CITY -->
+
+    <section id="city" class="resource-category">
+
+      <div class="section-inner">
+
+        <div class="resource-category-heading">
+
+          <div>
+            <p class="eyebrow">CITY OF COLORADO SPRINGS</p>
+            <h2>Planning, zoning & permits.</h2>
+          </div>
+
+          <p>
+            The useful stuff when you're trying to answer questions like:
+            What can I build? What's this property zoned?
+            What's being developed nearby? And who do I ask?
+          </p>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+          <article class="resource-item">
+
+            <span class="resource-type">Planning</span>
+
+            <h3>Colorado Springs Planning Department</h3>
+
+            <p>
+              The main city planning hub for land use review,
+              development, zoning, historic preservation,
+              plans and planning programs.
+            </p>
+
+            <a
+              href="https://coloradosprings.gov/planning"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Planning →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Zoning</span>
+
+            <h3>Zoning & Development Code</h3>
+
+            <p>
+              Learn how Colorado Springs zoning works and access the
+              Unified Development Code governing permitted uses,
+              setbacks, height, parking and other standards.
+            </p>
+
+            <a
+              href="https://coloradosprings.gov/zoning-code"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Zoning Information →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Land Use</span>
+
+            <h3>Land Use & Development Review</h3>
+
+            <p>
+              Applications, checklists, planning tools,
+              development review and information for property owners
+              considering changes to a site.
+            </p>
+
+            <a
+              href="https://coloradosprings.gov/lurdre"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Land Use Review →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Building</span>
+
+            <h3>Pikes Peak Regional Building Department</h3>
+
+            <p>
+              Building permits, inspection information and recent
+              permit history for properties throughout the region.
+            </p>
+
+            <a
+              href="https://www.pprbd.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit PPRBD →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COUNTY -->
+
+    <section id="county" class="resource-category">
+
+      <div class="section-inner">
+
+        <div class="resource-category-heading">
+
+          <div>
+            <p class="eyebrow">EL PASO COUNTY</p>
+            <h2>Taxes, parcels & records.</h2>
+          </div>
+
+          <p>
+            If the question involves who owns a property, how it's assessed,
+            what taxes are due, a recorded document or development outside
+            Colorado Springs city limits, you're probably heading here.
+          </p>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+          <article class="resource-item">
+
+            <span class="resource-type">Assessor</span>
+
+            <h3>El Paso County Property Search</h3>
+
+            <p>
+              Search ownership, parcel data, assessed value,
+              property characteristics and available sales information.
+            </p>
+
+            <a
+              href="https://property.spatialest.com/co/elpaso"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Search County Property Records →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Property Taxes</span>
+
+            <h3>El Paso County Treasurer</h3>
+
+            <p>
+              Search property taxes, view statements,
+              payment information, due dates, mill levies
+              and property-tax resources.
+            </p>
+
+            <a
+              href="https://treasurer.elpasoco.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Property Taxes →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Recorded Documents</span>
+
+            <h3>Clerk & Recorder</h3>
+
+            <p>
+              Information about recorded deeds, deeds of trust,
+              releases, plats, liens and other permanent
+              real-estate documents.
+            </p>
+
+            <a
+              href="https://clerkandrecorder.elpasoco.com/recording/recorded-documents/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Recorded Documents →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">County Planning</span>
+
+            <h3>Planning & Community Development</h3>
+
+            <p>
+              Planning, land use, zoning, development applications,
+              code enforcement and the county's Planning Projects Dashboard.
+            </p>
+
+            <a
+              href="https://planningdevelopment.elpasoco.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit County Planning →
+            </a>
+
+            <div class="bj-take-box">
+              <strong>BJ'S TAKE</strong>
+              <p>
+                Important distinction: outside Colorado Springs city limits,
+                you're often dealing with El Paso County instead of City Planning.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROPERTY RESEARCH -->
+
+    <section id="property" class="resource-category">
+
+      <div class="section-inner">
+
+        <div class="resource-category-heading">
+
+          <div>
+            <p class="eyebrow">REAL ESTATE & PROPERTY RESEARCH</p>
+            <h2>Research the house.</h2>
+          </div>
+
+          <p>
+            Ownership, permits, zoning, subdivision information
+            and the clues I use when I'm trying to understand
+            more about a property than what's in the MLS.
+          </p>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+          <article class="resource-item">
+
+            <span class="resource-type">Property Record</span>
+
+            <h3>Assessor Record</h3>
+
+            <p>
+              Start with the parcel record for ownership,
+              legal description, tax district, lot information,
+              approximate building details and valuation.
+            </p>
+
+            <a
+              href="https://property.spatialest.com/co/elpaso"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Search the Assessor →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Permit History</span>
+
+            <h3>Building Permit Research</h3>
+
+            <p>
+              Look for recent building permits, remodeling work,
+              inspections and other records through Pikes Peak
+              Regional Building Department.
+            </p>
+
+            <a
+              href="https://www.pprbd.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Search Building Records →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Zoning</span>
+
+            <h3>Check the Zoning</h3>
+
+            <p>
+              Use SpringsView to identify the city zoning designation,
+              then use the City's zoning information to understand
+              what that designation actually allows.
+            </p>
+
+            <a
+              href="https://experience.arcgis.com/experience/ae84852f373b43baa3c4a6934e3d742e"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Check Zoning →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Development</span>
+
+            <h3>See What's Being Built Nearby</h3>
+
+            <p>
+              Search active and recently approved development applications
+              instead of relying on rumors about that vacant parcel down the road.
+            </p>
+
+            <a
+              href="https://coloradosprings.gov/developmenttracker"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Development Tracker →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HISTORY -->
+
+    <section id="history" class="resource-category">
+
+      <div class="section-inner">
+
+        <div class="resource-category-heading">
+
+          <div>
+            <p class="eyebrow">HISTORY & ARCHIVES</p>
+            <h2>How old is this place, really?</h2>
+          </div>
+
+          <p>
+            Historic maps, old photographs, city directories,
+            building permits, subdivision plats and other rabbit holes
+            for figuring out what was here before us.
+          </p>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+          <article class="resource-item">
+
+            <span class="resource-type">Property History</span>
+
+            <h3>If These Walls Could Talk</h3>
+
+            <p>
+              Pikes Peak Library District's excellent guide to researching
+              a Colorado Springs or El Paso County property's history.
+            </p>
+
+            <a
+              href="https://ppld.org/researching-your-homes-history"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Research Your Home →
+            </a>
+
+            <div class="bj-take-box">
+              <strong>BJ'S TAKE</strong>
+              <p>
+                This one is fantastic. If you own an older house,
+                you can lose an afternoon here pretty easily.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Local Archives</span>
+
+            <h3>PPLD Regional History & Genealogy</h3>
+
+            <p>
+              Historic photographs, maps, manuscripts,
+              oral histories, government documents and other
+              Pikes Peak-region archival material.
+            </p>
+
+            <a
+              href="https://ppld.org/regional-history-genealogy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Regional History →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Historic Property Maps</span>
+
+            <h3>Sanborn Maps & Old Plat Research</h3>
+
+            <p>
+              PPLD's home-history guide explains how to use historic
+              fire-insurance maps, subdivision plats and other maps
+              to investigate older properties.
+            </p>
+
+            <a
+              href="https://ppld.org/researching-your-homes-history"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Start With PPLD's Guide →
+            </a>
+
+          </article>
+
+
+          <article class="resource-item">
+
+            <span class="resource-type">Historic Mining</span>
+
+            <h3>Historic Mining Districts of Colorado</h3>
+
+            <p>
+              Interactive information and maps showing historic
+              metal-mining districts and the records behind them.
+            </p>
+
+            <a
+              href="https://coloradogeologicalsurvey.org/minerals/historic-mining-districts/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Mining History →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT'S UNDER MY HOUSE -->
+
+    <section id="underground" class="under-house">
+
+      <div class="section-inner under-house-inner">
+
+        <div>
+
+          <p class="eyebrow">
+            GEOLOGY, MINES & OTHER FUN STUFF
+          </p>
+
+          <h2>
+            What's under my house?
+          </h2>
+
+        </div>
+
+
+        <div class="under-house-copy">
+
+          <p>
+            Colorado has mines, unusual geology, expansive soils
+            and a long history underground. These tools are great
+            for research, but they're not a substitute for a geotechnical
+            engineer or other qualified professional when a property
+            actually has a concern.
+          </p>
+
+
+          <div class="under-house-links">
+
+            <a
+              href="https://coloradogeologicalsurvey.org/geology/gis-data-map-portal/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Colorado Geological Survey GIS Portal
+              <span>→</span>
+            </a>
+
+            <a
+              href="https://coloradogeologicalsurvey.org/minerals/historic-mining-districts/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Historic Mining Districts
+              <span>→</span>
+            </a>
+
+            <a
+              href="https://coloradogeologicalsurvey.org/hazards/aml/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abandoned Mine Lands
+              <span>→</span>
+            </a>
+
+            <a
+              href="https://coloradogeologicalsurvey.org/publications/coal-mines-fields-colorado/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Colorado Coal Mines & Coal Fields
+              <span>→</span>
+            </a>
+
+          </div>
+
+
+          <p class="resource-note">
+            Historical mine and geology datasets vary in age,
+            completeness and accuracy. Use them as research tools,
+            not as engineering or safety determinations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VENDORS -->
+
+    <section id="vendors" class="vendors-section">
+
+      <div class="section-inner">
+
+        <div class="vendors-intro">
+
+          <p class="eyebrow">
+            BJ'S VENDOR LIST
+          </p>
+
+          <h2>
+            People I'd actually call.
+          </h2>
+
+          <p>
+            I'm keeping this list intentionally short.
+            These aren't paid placements or a giant directory.
+            They're names worth having when you need something done.
+          </p>
+
+        </div>
+
+
+        <div class="vendor-grid">
+
+          <article class="vendor-card">
+            <span>Flooring</span>
+            <h3>O'Brien's Carpet One</h3>
+            <p>Carpet and flooring.</p>
+          </article>
+
+          <article class="vendor-card">
+            <span>Flooring</span>
+            <h3>Avalanche Flooring</h3>
+            <p>Flooring.</p>
+          </article>
+
+          <article class="vendor-card">
+            <span>Sewer</span>
+            <h3>Main Line Sewer Scopes</h3>
+            <p>Sewer scopes and sewer inspection services.</p>
+          </article>
+
+          <article class="vendor-card">
+            <span>Roofing</span>
+            <h3>All Phase Roofing</h3>
+            <p>Roofing.</p>
+          </article>
+
+          <article class="vendor-card">
+            <span>Home Services</span>
+            <h3>Fox Mountain Home Solutions</h3>
+            <p>Home repair and improvement services.</p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BOTTOM CTA -->
+
+    <section class="resources-bottom">
+
+      <div class="section-inner resources-bottom-inner">
+
+        <p class="eyebrow">
+          CAN'T FIND IT?
+        </p>
+
+        <h2>
+          Ask BJ.
+        </h2>
+
+        <p>
+          If you're researching a Colorado Springs property and
+          don't know which government website, map or department
+          you need, send me the question.
+        </p>
+
+        <a href="index.html#contact">
+          Contact BJ
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="footer-brand">
+      <strong>BJ MAHAR</strong>
+      <span>COLORADO SPRINGS</span>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#real-estate">Real Estate</a>
+      <a href="index.html#explore">Explore COS</a>
+      <a href="resources.html">Resources</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-legal">
+      <p>Real estate. Local knowledge. Colorado Springs.</p>
+      <p>© <span id="year"></span> BJ Mahar.</p>
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
