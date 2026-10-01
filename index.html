@@ -17,6 +17,30 @@
   <title>BJ Mahar | Colorado Springs Real Estate & Local Guide</title>
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Makes the entire Explore COS card clickable
+       without changing the approved design */
+
+    .explore-card-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .explore-card-link .explore-card {
+      height: 100%;
+    }
+
+    .explore-card-link:hover {
+      color: inherit;
+    }
+
+    .explore-card-link:focus-visible {
+      outline: 3px solid #a0523a;
+      outline-offset: 4px;
+    }
+  </style>
 </head>
 
 
@@ -288,72 +312,102 @@
         <div class="explore-grid">
 
 
-          <div class="explore-card">
+          <!-- FOOD -->
 
-            <img
-              src="images/food.jpg"
-              alt="BJ Mahar enjoying tacos at a Colorado Springs style bar"
-            />
+          <a
+            href="Food.html"
+            class="explore-card-link"
+            aria-label="Explore BJ's Colorado Springs food guide"
+          >
 
-            <div class="explore-label">
+            <div class="explore-card">
 
-              <span>
-                FOOD
-              </span>
+              <img
+                src="images/food.jpg"
+                alt="BJ Mahar enjoying tacos at a Colorado Springs style bar"
+              />
 
-              <strong>
-                Where should we eat?
-              </strong>
+              <div class="explore-label">
 
-            </div>
+                <span>
+                  FOOD
+                </span>
 
-          </div>
+                <strong>
+                  Where should we eat?
+                </strong>
 
-
-
-          <div class="explore-card">
-
-            <img
-              src="images/outdoors.jpg"
-              alt="BJ Mahar fishing along a Colorado river"
-            />
-
-            <div class="explore-label">
-
-              <span>
-                OUTDOORS
-              </span>
-
-              <strong>
-                I need to get outside.
-              </strong>
+              </div>
 
             </div>
 
-          </div>
+          </a>
 
 
 
-          <div class="explore-card">
+          <!-- OUTDOORS -->
 
-            <img
-              src="images/history.jpg"
-              alt="Historic and modern Colorado Springs"
-            />
+          <a
+            href="outdoors.html"
+            class="explore-card-link"
+            aria-label="Explore BJ's Colorado Springs outdoor guide"
+          >
 
-            <div class="explore-label">
+            <div class="explore-card">
 
-              <span>
-                HISTORY
-              </span>
+              <img
+                src="images/outdoors.jpg"
+                alt="BJ Mahar fishing along the South Platte River"
+              />
 
-              <strong>
-                Tell me something I don't know.
-              </strong>
+              <div class="explore-label">
+
+                <span>
+                  OUTDOORS
+                </span>
+
+                <strong>
+                  I need to get outside.
+                </strong>
+
+              </div>
 
             </div>
 
-          </div>
+          </a>
+
+
+
+          <!-- HISTORY -->
+
+          <a
+            href="history.html"
+            class="explore-card-link"
+            aria-label="Explore Colorado Springs history"
+          >
+
+            <div class="explore-card">
+
+              <img
+                src="images/history.jpg"
+                alt="Historic and modern Colorado Springs"
+              />
+
+              <div class="explore-label">
+
+                <span>
+                  HISTORY
+                </span>
+
+                <strong>
+                  Tell me something I don't know.
+                </strong>
+
+              </div>
+
+            </div>
+
+          </a>
 
 
         </div>
@@ -640,7 +694,7 @@
 
 
   <!-- =====================================================
-       FOOTER / BROKERAGE
+       FOOTER
        ===================================================== -->
 
   <footer class="site-footer">
@@ -664,8 +718,16 @@
         Real Estate
       </a>
 
-      <a href="#explore">
-        Explore COS
+      <a href="Food.html">
+        Food
+      </a>
+
+      <a href="outdoors.html">
+        Outdoors
+      </a>
+
+      <a href="history.html">
+        History
       </a>
 
       <a href="resources.html">
