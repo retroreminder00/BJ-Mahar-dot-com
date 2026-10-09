@@ -1,961 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <meta
-    name="description"
-    content="A few of BJ Mahar's favorite stories from Colorado Springs history — Pikes Peak, Nikola Tesla, Elvira, Charles Schulz and how the city began."
-  />
-
-  <title>Colorado Springs History | BJ Mahar</title>
-
-  <link rel="stylesheet" href="styles.css" />
-
-  <style>
-
-    body.history-page {
-      background: #f2ecdf;
-    }
-
-    .history-page .site-header {
-      background: rgba(29, 48, 41, 0.97);
-    }
-
-
-    /* HERO */
-
-    .history-hero {
-      display: grid;
-      min-height: 640px;
-      padding-top: 68px;
-      grid-template-columns: 0.92fr 1.08fr;
-      background: #203a31;
-      color: #fffdf8;
-    }
-
-    .history-hero-copy {
-      display: flex;
-      padding: 75px 7vw;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-    .history-hero .eyebrow {
-      color: #d6bd99;
-    }
-
-    .history-hero h1 {
-      max-width: 650px;
-      margin-bottom: 24px;
-      font-size: clamp(3.2rem, 6vw, 6.3rem);
-      font-weight: 600;
-    }
-
-    .history-hero-copy > p:not(.eyebrow) {
-      max-width: 570px;
-      margin-bottom: 0;
-      color: rgba(255,255,255,0.82);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
-      line-height: 1.5;
-    }
-
-    .history-hero-image {
-      min-height: 570px;
-      overflow: hidden;
-    }
-
-    .history-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-
-    /* INTRO */
-
-    .history-intro {
-      padding: 76px 0;
-      background: #faf7f0;
-    }
-
-    .history-intro-inner {
-      max-width: 850px;
-    }
-
-    .history-intro h2 {
-      max-width: 760px;
-    }
-
-    .history-intro p:not(.eyebrow) {
-      max-width: 720px;
-      margin-bottom: 0;
-      color: #4b5752;
-    }
-
-
-    /* STORIES */
-
-    .history-story {
-      padding: 78px 0;
-    }
-
-    .history-story.light {
-      background: #faf7f0;
-    }
-
-    .history-story.tan {
-      background: #f2ecdf;
-    }
-
-    .story-grid {
-      display: grid;
-      grid-template-columns: 0.7fr 1.3fr;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .story-number {
-      display: block;
-      margin-bottom: 18px;
-      color: #9a513b;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1rem;
-      font-style: italic;
-    }
-
-    .story-grid h2 {
-      margin-bottom: 0;
-      font-size: clamp(2.2rem, 4vw, 4rem);
-    }
-
-    .story-copy {
-      max-width: 720px;
-    }
-
-    .story-copy p {
-      color: #4b5752;
-      font-size: 1rem;
-      line-height: 1.75;
-    }
-
-    .story-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .story-callout {
-      margin-top: 25px;
-      padding: 18px 20px;
-      border-left: 3px solid #9a513b;
-      background: rgba(154,81,59,0.06);
-    }
-
-    .story-callout strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #9a513b;
-      font-size: 0.58rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .story-callout p {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1rem;
-      font-style: italic;
-    }
-
-
-    /* PIKES PEAK */
-
-    .peak-section {
-      padding: 82px 0;
-      background: #30483f;
-      color: #fffdf8;
-    }
-
-    .peak-heading {
-      max-width: 800px;
-      margin-bottom: 42px;
-    }
-
-    .peak-section .eyebrow {
-      color: #d6bd99;
-    }
-
-    .peak-heading p:not(.eyebrow) {
-      max-width: 680px;
-      color: rgba(255,255,255,0.74);
-    }
-
-    .timeline {
-      border-top: 1px solid rgba(255,255,255,0.18);
-    }
-
-    .timeline-item {
-      display: grid;
-      padding: 27px 0;
-      grid-template-columns: 180px 1fr;
-      gap: 35px;
-      border-bottom: 1px solid rgba(255,255,255,0.18);
-    }
-
-    .timeline-date {
-      color: #d6bd99;
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .timeline-item h3 {
-      margin-bottom: 8px;
-      font-size: 1.55rem;
-    }
-
-    .timeline-item p {
-      max-width: 720px;
-      margin-bottom: 0;
-      color: rgba(255,255,255,0.72);
-      font-size: 0.9rem;
-    }
-
-
-    /* LOCAL LEGENDS */
-
-    .legends-section {
-      padding: 82px 0;
-      background: #a0523a;
-      color: #fffdf8;
-    }
-
-    .legends-heading {
-      max-width: 760px;
-      margin-bottom: 38px;
-    }
-
-    .legends-section .eyebrow {
-      color: rgba(255,255,255,0.7);
-    }
-
-    .legends-heading p:not(.eyebrow) {
-      color: rgba(255,255,255,0.78);
-    }
-
-    .legend-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid rgba(255,255,255,0.3);
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-    }
-
-    .legend-card {
-      padding: 28px;
-      border-right: 1px solid rgba(255,255,255,0.3);
-    }
-
-    .legend-card:last-child {
-      border-right: 0;
-    }
-
-    .legend-card span {
-      display: block;
-      margin-bottom: 22px;
-      color: rgba(255,255,255,0.67);
-      font-size: 0.56rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .legend-card h3 {
-      margin-bottom: 13px;
-      font-size: 1.65rem;
-    }
-
-    .legend-card p {
-      margin-bottom: 0;
-      color: rgba(255,255,255,0.78);
-      font-size: 0.88rem;
-      line-height: 1.6;
-    }
-
-
-    /* RESOURCES */
-
-    .history-resources {
-      padding: 75px 0;
-      background: #faf7f0;
-      text-align: center;
-    }
-
-    .history-resources-inner {
-      max-width: 760px;
-    }
-
-    .history-resources p:not(.eyebrow) {
-      max-width: 620px;
-      margin: 0 auto 27px;
-      color: #4b5752;
-    }
-
-    .history-resources a {
-      display: inline-block;
-      padding: 13px 19px;
-      border: 1px solid #30483f;
-      color: #30483f;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-
-      .history-hero {
-        min-height: 0;
-        grid-template-columns: 1fr;
-      }
-
-      .history-hero-copy {
-        padding: 70px 7vw 55px;
-      }
-
-      .history-hero-image {
-        min-height: 0;
-      }
-
-      .history-hero-image img {
-        height: auto;
-      }
-
-      .story-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .legend-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .legend-card {
-        border-right: 0;
-        border-bottom: 1px solid rgba(255,255,255,0.3);
-      }
-
-      .legend-card:last-child {
-        border-bottom: 0;
-      }
-
-    }
-
-
-    @media (max-width: 700px) {
-
-      .history-hero {
-        padding-top: 70px;
-      }
-
-      .history-hero-copy {
-        padding: 54px 18px 48px;
-      }
-
-      .history-hero h1 {
-        font-size: clamp(3rem, 15vw, 4.5rem);
-      }
-
-      .history-intro,
-      .history-story,
-      .peak-section,
-      .legends-section {
-        padding: 58px 0;
-      }
-
-      .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A few of BJ Mahar's favorite stories from Colorado Springs history — Pikes Peak, Nikola Tesla, Elvira, Charles Schulz and how the city began.">
+<title>Colorado Springs History | BJ Mahar</title>
+
+<link rel="canonical" href="https://bjmahar.com/history.html">
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bjmahar.com/history.html">
+<meta property="og:title" content="Colorado Springs History | BJ Mahar">
+<meta property="og:description" content="Tesla built lightning here. Elvira grew up here. Explore the surprising stories behind Colorado Springs with local real estate agent BJ Mahar.">
+<meta property="og:image" content="https://bjmahar.com/images/history.jpg">
+<meta property="og:image:alt" content="Historic Colorado Springs transitioning into modern Colorado Springs">
+<meta property="og:site_name" content="BJ Mahar">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Colorado Springs History | BJ Mahar">
+<meta name="twitter:description" content="Pikes Peak, Nikola Tesla, Elvira, Charles Schulz and the stories behind Colorado Springs.">
+<meta name="twitter:image" content="https://bjmahar.com/images/history.jpg">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+body.history-page{background:#f2ecdf}
+.history-page .site-header{background:rgba(29,48,41,.97)}
+
+.history-hero{display:grid;min-height:640px;padding-top:68px;grid-template-columns:.92fr 1.08fr;background:#203a31;color:#fffdf8}
+.history-hero-copy{display:flex;padding:75px 7vw;justify-content:center;flex-direction:column}
+.history-hero .eyebrow{color:#d6bd99}
+.history-hero h1{max-width:650px;margin-bottom:24px;font-size:clamp(3.2rem,6vw,6.3rem);font-weight:600}
+.history-hero-copy>p:not(.eyebrow){max-width:570px;margin-bottom:0;color:rgba(255,255,255,.82);font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.5}
+.history-hero-image{min-height:570px;overflow:hidden}
+.history-hero-image img{width:100%;height:100%;object-fit:cover}
+
+.history-intro{padding:76px 0;background:#faf7f0}
+.history-intro-inner{max-width:850px}
+.history-intro h2{max-width:760px}
+.history-intro p:not(.eyebrow){max-width:720px;margin-bottom:0;color:#4b5752}
+
+.history-story{padding:78px 0}
+.history-story.light{background:#faf7f0}
+.history-story.tan{background:#f2ecdf}
+.story-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;align-items:start}
+.story-number{display:block;margin-bottom:18px;color:#9a513b;font-family:Georgia,"Times New Roman",serif;font-size:1rem;font-style:italic}
+.story-grid h2{margin-bottom:0;font-size:clamp(2.2rem,4vw,4rem)}
+.story-copy{max-width:720px}
+.story-copy p{color:#4b5752;font-size:1rem;line-height:1.75}
+.story-copy p:last-child{margin-bottom:0}
+.story-callout{margin-top:25px;padding:18px 20px;border-left:3px solid #9a513b;background:rgba(154,81,59,.06)}
+.story-callout strong{display:block;margin-bottom:5px;color:#9a513b;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase}
+.story-callout p{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:1rem;font-style:italic}
+
+.peak-section{padding:82px 0;background:#30483f;color:#fffdf8}
+.peak-heading{max-width:800px;margin-bottom:42px}
+.peak-section .eyebrow{color:#d6bd99}
+.peak-heading p:not(.eyebrow){max-width:680px;color:rgba(255,255,255,.74)}
+.timeline{border-top:1px solid rgba(255,255,255,.18)}
+.timeline-item{display:grid;padding:27px 0;grid-template-columns:180px 1fr;gap:35px;border-bottom:1px solid rgba(255,255,255,.18)}
+.timeline-date{color:#d6bd99;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.timeline-item h3{margin-bottom:8px;font-size:1.55rem}
+.timeline-item p{max-width:720px;margin-bottom:0;color:rgba(255,255,255,.72);font-size:.9rem}
+
+.legends-section{padding:82px 0;background:#a0523a;color:#fffdf8}
+.legends-heading{max-width:760px;margin-bottom:38px}
+.legends-section .eyebrow{color:rgba(255,255,255,.7)}
+.legends-heading p:not(.eyebrow){color:rgba(255,255,255,.78)}
+.legend-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.3)}
+.legend-card{padding:28px;border-right:1px solid rgba(255,255,255,.3)}
+.legend-card:last-child{border-right:0}
+.legend-card span{display:block;margin-bottom:22px;color:rgba(255,255,255,.67);font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.legend-card h3{margin-bottom:13px;font-size:1.65rem}
+.legend-card p{margin-bottom:0;color:rgba(255,255,255,.78);font-size:.88rem;line-height:1.6}
+.legend-card p+p{margin-top:15px}
+
+.history-resources{padding:75px 0;background:#faf7f0;text-align:center}
+.history-resources-inner{max-width:760px}
+.history-resources p:not(.eyebrow){max-width:620px;margin:0 auto 27px;color:#4b5752}
+.history-resources a{display:inline-block;padding:13px 19px;border:1px solid #30483f;color:#30483f;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+@media(max-width:900px){
+.history-hero{min-height:0;grid-template-columns:1fr}
+.history-hero-copy{padding:70px 7vw 55px}
+.history-hero-image{min-height:0}
+.history-hero-image img{height:auto}
+.story-grid{grid-template-columns:1fr;gap:25px}
+.legend-grid{grid-template-columns:1fr}
+.legend-card{border-right:0;border-bottom:1px solid rgba(255,255,255,.3)}
+.legend-card:last-child{border-bottom:0}
+}
+@media(max-width:700px){
+.history-hero{padding-top:70px}
+.history-hero-copy{padding:54px 18px 48px}
+.history-hero h1{font-size:clamp(3rem,15vw,4.5rem)}
+.history-intro,.history-story,.peak-section,.legends-section{padding:58px 0}
+.timeline-item{grid-template-columns:1fr;gap:8px}
+}
+</style>
 </head>
-
 
 <body class="history-page">
 
-
-  <!-- HEADER -->
-
-  <header class="site-header scrolled">
-
-    <a class="brand" href="index.html">
-      <span class="brand-name">BJ MAHAR</span>
-      <span class="brand-city">COLORADO SPRINGS</span>
-    </a>
-
-    <button
-      class="menu-toggle"
-      aria-label="Open navigation"
-      aria-expanded="false"
-      aria-controls="site-nav"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav id="site-nav" class="site-nav">
-
-      <a href="index.html#real-estate">Real Estate</a>
-      <a href="index.html#explore">Explore COS</a>
-      <a href="index.html#neighborhoods">Neighborhoods</a>
-      <a href="resources.html" class="nav-resource">Resources</a>
-      <a href="index.html#about">About BJ</a>
-      <a href="index.html#contact">Contact</a>
-
-    </nav>
-
-  </header>
-
-
-  <main>
-
-
-    <!-- HERO -->
-
-    <section class="history-hero">
-
-      <div class="history-hero-copy">
-
-        <p class="eyebrow">
-          COLORADO SPRINGS HISTORY
-        </p>
-
-        <h1>
-          This place has stories.
-        </h1>
-
-        <p>
-          Tesla built lightning here. Elvira grew up here.
-          Charlie Brown has Colorado Springs DNA.
-          And that's barely scratching the surface.
-        </p>
-
-      </div>
-
-
-      <div class="history-hero-image">
-
-        <img
-          src="images/history.jpg"
-          alt="Historic Colorado Springs transitioning into modern Colorado Springs"
-        />
-
-      </div>
-
-    </section>
-
-
-
-    <!-- INTRO -->
-
-    <section class="history-intro">
-
-      <div class="section-inner history-intro-inner">
-
-        <p class="eyebrow">
-          BEFORE COLORADO SPRINGS
-        </p>
-
-        <h2>
-          The story didn't start in 1871.
-        </h2>
-
-        <p>
-          Long before streets, railroads or a city called Colorado Springs,
-          Indigenous peoples lived, hunted and traveled throughout this region.
-          The Ute people have an especially deep connection to central Colorado
-          and the mountain that dominates the landscape here.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- UTE / TAVA -->
-
-    <section class="history-story tan">
-
-      <div class="section-inner story-grid">
-
-        <div>
-
-          <span class="story-number">
-            01
-          </span>
-
-          <p class="eyebrow">
-            BEFORE PIKE
-          </p>
-
-          <h2>
-            Tava.
-          </h2>
-
-        </div>
-
-
-        <div class="story-copy">
-
-          <p>
-            The Ute people lived throughout the mountains of what is now
-            Colorado long before American explorers arrived.
-          </p>
-
-          <p>
-            Pikes Peak held particular significance to the Ute.
-            The name <strong>Tava</strong>, meaning roughly
-            <strong>“Sun”</strong>, is associated with the mountain,
-            and the Tabeguache band of Utes has been described as the
-            “People of Sun Mountain.”
-          </p>
-
-          <p>
-            So while most of us grew up calling it Pikes Peak,
-            the mountain's human history stretches back far beyond
-            Zebulon Pike.
-          </p>
-
-          <div class="story-callout">
-
-            <strong>
-              THE IMPORTANT PART
-            </strong>
-
-            <p>
-              The mountain had a history, a name and meaning
-              long before it appeared on an American map.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- PIKES PEAK -->
-
-    <section class="peak-section">
-
-      <div class="section-inner">
-
-        <div class="peak-heading">
-
-          <p class="eyebrow">
-            SO WHY DO WE CALL IT PIKES PEAK?
-          </p>
-
-          <h2>
-            The name has a story of its own.
-          </h2>
-
-          <p>
-            And yes — the guy it's named after never actually
-            made it to the summit.
-          </p>
-
-        </div>
-
-
-        <div class="timeline">
-
-
-          <article class="timeline-item">
-
-            <div class="timeline-date">
-              BEFORE 1806
-            </div>
-
-            <div>
-
-              <h3>
-                Tava / Sun Mountain
-              </h3>
-
-              <p>
-                The Ute relationship with the mountain predates
-                American exploration by generations.
-              </p>
-
-            </div>
-
-          </article>
-
-
-
-          <article class="timeline-item">
-
-            <div class="timeline-date">
-              1806
-            </div>
-
-            <div>
-
-              <h3>
-                Zebulon Pike shows up.
-              </h3>
-
-              <p>
-                Lieutenant Zebulon Montgomery Pike encountered the mountain
-                while leading a U.S. expedition through the region.
-                His party attempted to climb it but turned back in harsh
-                winter conditions. Pike never reached the summit.
-              </p>
-
-            </div>
-
-          </article>
-
-
-
-          <article class="timeline-item">
-
-            <div class="timeline-date">
-              1800s
-            </div>
-
-            <div>
-
-              <h3>
-                Pike's Peak
-              </h3>
-
-              <p>
-                Pike's name became attached to the mountain.
-                During the Colorado Gold Rush, “Pike's Peak or Bust”
-                became one of the defining slogans of westward migration.
-              </p>
-
-            </div>
-
-          </article>
-
-
-
-          <article class="timeline-item">
-
-            <div class="timeline-date">
-              LATE 1800s
-            </div>
-
-            <div>
-
-              <h3>
-                The apostrophe disappears.
-              </h3>
-
-              <p>
-                Federal geographic naming conventions generally avoided
-                possessive apostrophes. Over time, “Pike's Peak”
-                became the official <strong>Pikes Peak</strong>
-                we use today.
-              </p>
-
-            </div>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- FOUNDING -->
-
-    <section class="history-story light">
-
-      <div class="section-inner story-grid">
-
-        <div>
-
-          <span class="story-number">
-            02
-          </span>
-
-          <p class="eyebrow">
-            1871
-          </p>
-
-          <h2>
-            Then somebody decided to build a city.
-          </h2>
-
-        </div>
-
-
-        <div class="story-copy">
-
-          <p>
-            Colorado Springs was founded in 1871 by Civil War veteran
-            and railroad developer <strong>William Jackson Palmer</strong>.
-          </p>
-
-          <p>
-            Unlike many western towns, Colorado Springs wasn't created
-            because somebody found gold underneath it. Palmer envisioned
-            a planned community that could attract residents and visitors
-            with scenery, climate, rail access and nearby mineral springs.
-          </p>
-
-          <p>
-            Railroads, tourism, gold money from nearby mining districts,
-            health seekers and eventually the military all helped shape
-            the city that grew from Palmer's original idea.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- LOCAL LEGENDS -->
-
-    <section class="legends-section">
-
-      <div class="section-inner">
-
-        <div class="legends-heading">
-
-          <p class="eyebrow">
-            WAIT... THAT HAPPENED HERE?
-          </p>
-
-          <h2>
-            Colorado Springs has had some interesting neighbors.
-          </h2>
-
-          <p>
-            These are the stories I like — the ones that make you
-            look at a familiar place a little differently.
-          </p>
-
-        </div>
-
-
-        <div class="legend-grid">
-
-
-          <!-- TESLA -->
-
-          <article class="legend-card">
-
-            <span>
-              1899
-            </span>
-
-            <h3>
-              Nikola Tesla
-            </h3>
-
-            <p>
-              Tesla came to Colorado Springs in 1899 and built an
-              experimental laboratory east of town to study high-voltage
-              electricity and wireless power.
-            </p>
-
-            <p>
-              His enormous electrical experiments produced artificial
-              lightning — and one experiment overloaded the local power
-              system and knocked out electricity in Colorado Springs.
-            </p>
-
-          </article>
-
-
-
-          <!-- ELVIRA -->
-
-          <article class="legend-card">
-
-            <span>
-              LOCAL KID
-            </span>
-
-            <h3>
-              Elvira
-            </h3>
-
-            <p>
-              Before Cassandra Peterson became Elvira, Mistress of the Dark,
-              she grew up right here in Colorado Springs.
-            </p>
-
-            <p>
-              She attended local schools and graduated from Palmer High
-              before eventually becoming one of the most recognizable
-              characters in American pop culture.
-            </p>
-
-          </article>
-
-
-
-          <!-- SCHULZ -->
-
-          <article class="legend-card">
-
-            <span>
-              GOOD GRIEF
-            </span>
-
-            <h3>
-              Charles Schulz
-            </h3>
-
-            <p>
-              Peanuts creator Charles Schulz lived in Colorado Springs
-              during the early years of the comic strip.
-            </p>
-
-            <p>
-              He drew Peanuts here, met people whose names and surroundings
-              influenced the strip, and even painted Charlie Brown and Snoopy
-              directly onto a wall in his daughter's bedroom.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- RESOURCES -->
-
-    <section class="history-resources">
-
-      <div class="section-inner history-resources-inner">
-
-        <p class="eyebrow">
-          WANT TO GO DOWN THE RABBIT HOLE?
-        </p>
-
-        <h2>
-          There's a lot more.
-        </h2>
-
-        <p>
-          Historic maps, mining records, old property information,
-          city archives and other Colorado Springs research tools
-          are over in the Resource Guide.
-        </p>
-
-        <a href="resources.html">
-          Explore Historical Resources →
-        </a>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- FOOTER -->
-
-  <footer class="site-footer">
-
-    <div class="footer-brand">
-
-      <strong>
-        BJ MAHAR
-      </strong>
-
-      <span>
-        COLORADO SPRINGS
-      </span>
-
-    </div>
-
-
-    <div class="footer-links">
-
-      <a href="index.html">Home</a>
-      <a href="index.html#real-estate">Real Estate</a>
-      <a href="Food.html">Food</a>
-      <a href="outdoors.html">Outdoors</a>
-      <a href="history.html">History</a>
-      <a href="resources.html">Resources</a>
-      <a href="index.html#contact">Contact</a>
-
-    </div>
-
-
-    <div class="footer-legal">
-
-      <img
-        src="images/homesiq%20logo.webp"
-        alt="HomesIQ"
-        style="
-          width: auto;
-          max-width: 130px;
-          max-height: 48px;
-          margin-left: auto;
-          margin-bottom: 12px;
-          object-fit: contain;
-        "
-      />
-
-      <p>
-        BJ Mahar · Broker Associate · HomesIQ
-      </p>
-
-      <p>
-        719-650-4672 · bj@movewithiq.com
-      </p>
-
-      <p>
-        © <span id="year"></span> BJ Mahar.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-  <script src="script.js"></script>
-
+<header class="site-header scrolled">
+<a class="brand" href="index.html">
+<span class="brand-name">BJ MAHAR</span>
+<span class="brand-city">COLORADO SPRINGS</span>
+</a>
+
+<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+<span></span><span></span><span></span>
+</button>
+
+<nav id="site-nav" class="site-nav" aria-label="Main navigation">
+<a href="index.html#real-estate">Real Estate</a>
+<a href="index.html#explore">Explore COS</a>
+<a href="index.html#neighborhoods">Neighborhoods</a>
+<a href="resources.html" class="nav-resource">Resources</a>
+<a href="index.html#about">About BJ</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="history-hero">
+<div class="history-hero-copy">
+<p class="eyebrow">COLORADO SPRINGS HISTORY</p>
+<h1>This place has stories.</h1>
+<p>Tesla built lightning here. Elvira grew up here. Charlie Brown has Colorado Springs DNA. And that's barely scratching the surface.</p>
+</div>
+<div class="history-hero-image">
+<img src="images/history.jpg" alt="Historic Colorado Springs transitioning into modern Colorado Springs">
+</div>
+</section>
+
+<!-- INTRO -->
+<section class="history-intro">
+<div class="section-inner history-intro-inner">
+<p class="eyebrow">BEFORE COLORADO SPRINGS</p>
+<h2>The story didn't start in 1871.</h2>
+<p>Long before streets, railroads or a city called Colorado Springs, Indigenous peoples lived, hunted and traveled throughout this region. The Ute people have an especially deep connection to central Colorado and the mountain that dominates the landscape here.</p>
+</div>
+</section>
+
+<!-- UTE / TAVA -->
+<section class="history-story tan">
+<div class="section-inner story-grid">
+<div>
+<span class="story-number">01</span>
+<p class="eyebrow">BEFORE PIKE</p>
+<h2>Tava.</h2>
+</div>
+<div class="story-copy">
+<p>The Ute people lived throughout the mountains of what is now Colorado long before American explorers arrived.</p>
+<p>Pikes Peak held particular significance to the Ute. The name <strong>Tava</strong>, meaning roughly <strong>“Sun”</strong>, is associated with the mountain, and the Tabeguache band of Utes has been described as the “People of Sun Mountain.”</p>
+<p>So while most of us grew up calling it Pikes Peak, the mountain's human history stretches back far beyond Zebulon Pike.</p>
+<div class="story-callout">
+<strong>THE IMPORTANT PART</strong>
+<p>The mountain had a history, a name and meaning long before it appeared on an American map.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PIKES PEAK -->
+<section class="peak-section">
+<div class="section-inner">
+<div class="peak-heading">
+<p class="eyebrow">SO WHY DO WE CALL IT PIKES PEAK?</p>
+<h2>The name has a story of its own.</h2>
+<p>And yes — the guy it's named after never actually made it to the summit.</p>
+</div>
+
+<div class="timeline">
+
+<article class="timeline-item">
+<div class="timeline-date">BEFORE 1806</div>
+<div>
+<h3>Tava / Sun Mountain</h3>
+<p>The Ute relationship with the mountain predates American exploration by generations.</p>
+</div>
+</article>
+
+<article class="timeline-item">
+<div class="timeline-date">1806</div>
+<div>
+<h3>Zebulon Pike shows up.</h3>
+<p>Lieutenant Zebulon Montgomery Pike encountered the mountain while leading a U.S. expedition through the region. His party attempted to climb it but turned back in harsh winter conditions. Pike never reached the summit.</p>
+</div>
+</article>
+
+<article class="timeline-item">
+<div class="timeline-date">1800s</div>
+<div>
+<h3>Pike's Peak</h3>
+<p>Pike's name became attached to the mountain. During the Colorado Gold Rush, “Pike's Peak or Bust” became one of the defining slogans of westward migration.</p>
+</div>
+</article>
+
+<article class="timeline-item">
+<div class="timeline-date">LATE 1800s</div>
+<div>
+<h3>The apostrophe disappears.</h3>
+<p>Federal geographic naming conventions generally avoided possessive apostrophes. Over time, “Pike's Peak” became the official <strong>Pikes Peak</strong> we use today.</p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- FOUNDING -->
+<section class="history-story light">
+<div class="section-inner story-grid">
+<div>
+<span class="story-number">02</span>
+<p class="eyebrow">1871</p>
+<h2>Then somebody decided to build a city.</h2>
+</div>
+<div class="story-copy">
+<p>Colorado Springs was founded in 1871 by Civil War veteran and railroad developer <strong>William Jackson Palmer</strong>.</p>
+<p>Unlike many western towns, Colorado Springs wasn't created because somebody found gold underneath it. Palmer envisioned a planned community that could attract residents and visitors with scenery, climate, rail access and nearby mineral springs.</p>
+<p>Railroads, tourism, gold money from nearby mining districts, health seekers and eventually the military all helped shape the city that grew from Palmer's original idea.</p>
+</div>
+</div>
+</section>
+
+<!-- LOCAL LEGENDS -->
+<section class="legends-section">
+<div class="section-inner">
+<div class="legends-heading">
+<p class="eyebrow">WAIT... THAT HAPPENED HERE?</p>
+<h2>Colorado Springs has had some interesting neighbors.</h2>
+<p>These are the stories I like — the ones that make you look at a familiar place a little differently.</p>
+</div>
+
+<div class="legend-grid">
+
+<article class="legend-card">
+<span>1899</span>
+<h3>Nikola Tesla</h3>
+<p>Tesla came to Colorado Springs in 1899 and built an experimental laboratory east of town to study high-voltage electricity and wireless power.</p>
+<p>His enormous electrical experiments produced artificial lightning — and one experiment overloaded the local power system and knocked out electricity in Colorado Springs.</p>
+</article>
+
+<article class="legend-card">
+<span>LOCAL KID</span>
+<h3>Elvira</h3>
+<p>Before Cassandra Peterson became Elvira, Mistress of the Dark, she grew up right here in Colorado Springs.</p>
+<p>She attended local schools and graduated from Palmer High before eventually becoming one of the most recognizable characters in American pop culture.</p>
+</article>
+
+<article class="legend-card">
+<span>GOOD GRIEF</span>
+<h3>Charles Schulz</h3>
+<p>Peanuts creator Charles Schulz lived in Colorado Springs during the early years of the comic strip.</p>
+<p>He drew Peanuts here, met people whose names and surroundings influenced the strip, and even painted Charlie Brown and Snoopy directly onto a wall in his daughter's bedroom.</p>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- RESOURCES -->
+<section class="history-resources">
+<div class="section-inner history-resources-inner">
+<p class="eyebrow">WANT TO GO DOWN THE RABBIT HOLE?</p>
+<h2>There's a lot more.</h2>
+<p>Historic maps, mining records, old property information, city archives and other Colorado Springs research tools are over in the Resource Guide.</p>
+<a href="resources.html">Explore Historical Resources →</a>
+</div>
+</section>
+
+</main>
+
+<!-- STANDARD SITE FOOTER -->
+<footer class="site-footer">
+<div class="footer-brand">
+<strong>BJ MAHAR</strong>
+<span>COLORADO SPRINGS</span>
+</div>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="index.html#real-estate">Real Estate</a>
+<a href="Food.html">Food</a>
+<a href="outdoors.html">Outdoors</a>
+<a href="history.html">History</a>
+<a href="resources.html">Resources</a>
+<a href="index.html#about">About</a>
+<a href="index.html#contact">Contact</a>
+</div>
+
+<div class="footer-legal">
+<img src="images/homesiq%20logo.webp" alt="HomesIQ" style="width:auto;max-width:130px;max-height:48px;margin-left:auto;margin-bottom:12px;object-fit:contain;">
+<p>BJ Mahar · Broker Associate · HomesIQ</p>
+<p><a href="tel:+17196504672">719-650-4672</a> · <a href="mailto:bj@movewithiq.com">bj@movewithiq.com</a></p>
+<p>© <span id="year"></span> BJ Mahar.</p>
+</div>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
