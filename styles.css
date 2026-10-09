@@ -1098,3 +1098,36 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Mobile navigation background fix */
+@media (max-width: 760px) {
+  .site-header .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100dvh;
+    min-height: 100vh;
+    z-index: 1001;
+    background: #1d3029 !important;
+    color: #fffdf8;
+    overflow-y: auto;
+  }
+
+  .site-header .site-nav.open {
+    background: #1d3029 !important;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .site-header .site-nav a {
+    color: #fffdf8;
+  }
+
+  .site-header .site-nav .nav-resource {
+    color: #dcc59f;
+  }
+}
+
