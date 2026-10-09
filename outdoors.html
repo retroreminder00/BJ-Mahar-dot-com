@@ -1,315 +1,850 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BJ Mahar's favorite outdoor places around Colorado Springs — fishing, hiking, parks, golf and Colorado day trips.">
-<title>Get Outside in Colorado Springs | BJ Mahar</title>
-<link rel="canonical" href="https://bjmahar.com/outdoors.html">
-<link rel="icon" type="image/png" href="images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BJ Mahar's favorite outdoor places around Colorado Springs — fishing, hiking, parks, golf and Colorado day trips.">
+  <title>Get Outside in Colorado Springs | BJ Mahar</title>
+  <link rel="canonical" href="https://bjmahar.com/outdoors.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://bjmahar.com/outdoors.html">
-<meta property="og:title" content="Get Outside in Colorado Springs | BJ Mahar">
-<meta property="og:description" content="Fishing, hiking, parks, golf and Colorado day trips. Explore BJ Mahar's favorite outdoor places around Colorado Springs.">
-<meta property="og:image" content="https://bjmahar.com/images/outdoors.jpg">
-<meta property="og:image:alt" content="BJ Mahar fishing on the South Platte River">
-<meta property="og:site_name" content="BJ Mahar">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bjmahar.com/outdoors.html">
+  <meta property="og:title" content="Get Outside in Colorado Springs | BJ Mahar">
+  <meta property="og:description" content="Fishing, hiking, parks, golf and Colorado day trips. Explore BJ Mahar's favorite outdoor places around Colorado Springs.">
+  <meta property="og:image" content="https://bjmahar.com/images/outdoors.jpg">
+  <meta property="og:image:alt" content="BJ Mahar fishing on the South Platte River">
+  <meta property="og:site_name" content="BJ Mahar">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Get Outside in Colorado Springs | BJ Mahar">
-<meta name="twitter:description" content="Fishing, trails, parks, golf and day trips around Colorado Springs. BJ's personal outdoor guide.">
-<meta name="twitter:image" content="https://bjmahar.com/images/outdoors.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Get Outside in Colorado Springs | BJ Mahar">
+  <meta name="twitter:description" content="Fishing, trails, parks, golf and day trips around Colorado Springs. BJ's personal outdoor guide.">
+  <meta name="twitter:image" content="https://bjmahar.com/images/outdoors.jpg">
 
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 
-<style>
-body.outdoors-page{background:#f2ecdf}
-.outdoors-page .site-header{background:rgba(29,48,41,.97)}
+  <style>
+    body.outdoors-page {
+      background: #f2ecdf;
+    }
 
-.outdoors-hero{display:grid;min-height:640px;padding-top:68px;grid-template-columns:.92fr 1.08fr;background:#203a31;color:#fffdf8}
-.outdoors-hero-copy{display:flex;padding:75px 7vw;justify-content:center;flex-direction:column}
-.outdoors-hero .eyebrow{color:#d6bd99}
-.outdoors-hero h1{max-width:650px;margin-bottom:24px;font-size:clamp(3.2rem,6vw,6.3rem);font-weight:600}
-.outdoors-hero-copy>p:not(.eyebrow){max-width:570px;margin-bottom:0;color:rgba(255,255,255,.82);font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.5}
-.outdoors-hero-image{min-height:570px;overflow:hidden}
-.outdoors-hero-image img{width:100%;height:100%;object-fit:cover}
+    .outdoors-page .site-header {
+      background: rgba(29, 48, 41, 0.97);
+    }
 
-.outdoors-intro{padding:76px 0;background:#faf7f0}
-.outdoors-intro-inner{max-width:850px}
-.outdoors-intro h2{max-width:760px}
-.outdoors-intro p:not(.eyebrow){max-width:700px;margin-bottom:0;color:#4b5752}
+    /* HERO */
 
-.outdoors-jump{position:sticky;z-index:100;top:68px;padding:18px 0;border-top:1px solid rgba(35,48,43,.08);border-bottom:1px solid rgba(35,48,43,.12);background:rgba(250,247,240,.96);backdrop-filter:blur(10px)}
-.outdoors-jump-inner{display:flex;gap:11px 24px;flex-wrap:wrap}
-.outdoors-jump a{color:#38443f;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.outdoors-jump a:hover{color:#9a513b}
+    .outdoors-hero {
+      display: grid;
+      min-height: 640px;
+      padding-top: 68px;
+      grid-template-columns: 0.92fr 1.08fr;
+      background: #203a31;
+      color: #fffdf8;
+    }
 
-.outdoor-section{padding:78px 0}
-.outdoor-section.light{background:#faf7f0}
-.outdoor-section.tan{background:#f2ecdf}
-.section-heading-grid{display:grid;margin-bottom:38px;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:end}
-.section-heading-grid h2{margin-bottom:0}
-.section-heading-grid>p{max-width:620px;margin-bottom:3px;color:#4b5752}
+    .outdoors-hero-copy {
+      display: flex;
+      padding: 75px 7vw;
+      justify-content: center;
+      flex-direction: column;
+    }
 
-.fishing-section{padding:82px 0;background:#30483f;color:#fffdf8}
-.fishing-section .eyebrow{color:#d6bd99}
-.fishing-intro{display:grid;margin-bottom:42px;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:end}
-.fishing-intro h2{margin-bottom:0}
-.fishing-intro>p{max-width:620px;margin-bottom:3px;color:rgba(255,255,255,.75)}
-.fishing-levels{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.fishing-level{padding:28px;background:#294038;border:1px solid rgba(255,255,255,.1)}
-.fishing-level-number{display:block;margin-bottom:20px;color:#d6bd99;font-size:.57rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
-.fishing-level h3{margin-bottom:8px;font-size:clamp(1.55rem,2.5vw,2.2rem)}
-.fishing-level>p{margin-bottom:20px;color:rgba(255,255,255,.68);font-size:.88rem}
-.fishing-spots{border-top:1px solid rgba(255,255,255,.16)}
-.fishing-spot{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.16);font-family:Georgia,"Times New Roman",serif;font-size:1.05rem}
-.tiny-fish-note{margin-top:35px;padding:20px 22px;border-left:3px solid #d6bd99;background:rgba(255,255,255,.05)}
-.tiny-fish-note strong{display:block;margin-bottom:5px;color:#d6bd99;font-size:.58rem;letter-spacing:.11em;text-transform:uppercase}
-.tiny-fish-note p{margin:0;max-width:750px;color:rgba(255,255,255,.8);font-family:Georgia,"Times New Roman",serif;font-style:italic}
+    .outdoors-hero .eyebrow {
+      color: #d6bd99;
+    }
 
-.place-list{border-top:1px solid rgba(35,48,43,.17)}
-.place{display:grid;padding:25px 0;grid-template-columns:55px 1fr auto;gap:24px;align-items:center;border-bottom:1px solid rgba(35,48,43,.17)}
-.place-number{color:#9a513b;font-family:Georgia,"Times New Roman",serif;font-size:.85rem;font-style:italic}
-.place h3{margin:0;font-size:clamp(1.35rem,2.1vw,1.85rem)}
-.place-note{margin-top:5px;margin-bottom:0;color:#64706b;font-size:.84rem}
-.place-tag{padding:7px 10px;border:1px solid rgba(154,81,59,.32);color:#9a513b;font-size:.55rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
+    .outdoors-hero h1 {
+      max-width: 650px;
+      margin-bottom: 24px;
+      font-size: clamp(3.2rem, 6vw, 6.3rem);
+      font-weight: 600;
+    }
 
-.golf-section{padding:82px 0;background:#a0523a;color:#fffdf8}
-.golf-section .eyebrow{color:rgba(255,255,255,.7)}
-.golf-heading{display:grid;margin-bottom:38px;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:end}
-.golf-heading h2{margin-bottom:0}
-.golf-heading>p{max-width:600px;margin-bottom:3px;color:rgba(255,255,255,.78)}
-.golf-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.3)}
-.golf-card{padding:25px 20px;border-right:1px solid rgba(255,255,255,.3)}
-.golf-card:last-child{border-right:0}
-.golf-card span{display:block;margin-bottom:8px;color:rgba(255,255,255,.66);font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.golf-card h3{margin-bottom:8px;font-size:1.35rem}
-.golf-card p{margin:0;color:rgba(255,255,255,.72);font-size:.8rem}
+    .outdoors-hero-copy > p:not(.eyebrow) {
+      max-width: 570px;
+      margin-bottom: 0;
+      color: rgba(255,255,255,0.82);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      line-height: 1.5;
+    }
 
-.trip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.trip-card{min-height:220px;padding:28px;border:1px solid rgba(35,48,43,.13);background:#f2ecdf}
-.trip-card span{display:block;margin-bottom:28px;color:#9a513b;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.trip-card h3{margin-bottom:10px;font-size:1.65rem}
-.trip-card p{margin-bottom:0;color:#4b5752;font-size:.88rem}
+    .outdoors-hero-image {
+      min-height: 570px;
+      overflow: hidden;
+    }
 
-.outdoors-cta{padding:75px 0;background:#203a31;color:#fffdf8;text-align:center}
-.outdoors-cta-inner{max-width:720px}
-.outdoors-cta .eyebrow{color:#d6bd99}
-.outdoors-cta p:not(.eyebrow){max-width:570px;margin:0 auto 27px;color:rgba(255,255,255,.76)}
-.outdoors-cta a{display:inline-block;padding:13px 19px;border:1px solid rgba(255,255,255,.65);font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .outdoors-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-@media(max-width:900px){
-.outdoors-hero{min-height:0;grid-template-columns:1fr}
-.outdoors-hero-copy{padding:70px 7vw 55px}
-.outdoors-hero-image{min-height:0}
-.outdoors-hero-image img{height:auto}
-.section-heading-grid,.fishing-intro,.golf-heading{grid-template-columns:1fr;gap:12px}
-.golf-grid{grid-template-columns:repeat(2,1fr)}
-.golf-card:nth-child(2){border-right:0}
-.golf-card:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.3)}
-}
-@media(max-width:700px){
-.outdoors-hero{padding-top:70px}
-.outdoors-hero-copy{padding:54px 18px 48px}
-.outdoors-hero h1{font-size:clamp(3rem,15vw,4.5rem)}
-.outdoors-intro,.outdoor-section,.fishing-section,.golf-section{padding:58px 0}
-.outdoors-jump{position:static}
-.fishing-levels,.trip-grid{grid-template-columns:1fr}
-.place{grid-template-columns:35px 1fr;gap:14px}
-.place-tag{grid-column:2;width:fit-content}
-.golf-grid{grid-template-columns:1fr}
-.golf-card,.golf-card:nth-child(2){border-right:0;border-bottom:1px solid rgba(255,255,255,.3)}
-.golf-card:last-child{border-bottom:0}
-}
-</style>
+    /* INTRO */
+
+    .outdoors-intro {
+      padding: 76px 0;
+      background: #faf7f0;
+    }
+
+    .outdoors-intro-inner {
+      max-width: 850px;
+    }
+
+    .outdoors-intro h2 {
+      max-width: 760px;
+    }
+
+    .outdoors-intro p:not(.eyebrow) {
+      max-width: 700px;
+      margin-bottom: 0;
+      color: #4b5752;
+    }
+
+    /* QUICK NAV */
+
+    .outdoors-jump {
+      position: sticky;
+      z-index: 100;
+      top: 68px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(35,48,43,0.08);
+      border-bottom: 1px solid rgba(35,48,43,0.12);
+      background: rgba(250,247,240,0.96);
+      backdrop-filter: blur(10px);
+    }
+
+    .outdoors-jump-inner {
+      display: flex;
+      gap: 11px 24px;
+      flex-wrap: wrap;
+    }
+
+    .outdoors-jump a {
+      color: #38443f;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .outdoors-jump a:hover {
+      color: #9a513b;
+    }
+
+    /* GENERAL SECTIONS */
+
+    .outdoor-section {
+      padding: 78px 0;
+    }
+
+    .outdoor-section.light {
+      background: #faf7f0;
+    }
+
+    .outdoor-section.tan {
+      background: #f2ecdf;
+    }
+
+    .section-heading-grid {
+      display: grid;
+      margin-bottom: 38px;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 55px;
+      align-items: end;
+    }
+
+    .section-heading-grid h2 {
+      margin-bottom: 0;
+    }
+
+    .section-heading-grid > p {
+      max-width: 620px;
+      margin-bottom: 3px;
+      color: #4b5752;
+    }
+
+    /* FISHING */
+
+    .fishing-section {
+      padding: 82px 0;
+      background: #30483f;
+      color: #fffdf8;
+    }
+
+    .fishing-section .eyebrow {
+      color: #d6bd99;
+    }
+
+    .fishing-intro {
+      display: grid;
+      margin-bottom: 42px;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 55px;
+      align-items: end;
+    }
+
+    .fishing-intro h2 {
+      margin-bottom: 0;
+    }
+
+    .fishing-intro > p {
+      max-width: 620px;
+      margin-bottom: 3px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .fishing-levels {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .fishing-level {
+      padding: 28px;
+      background: #294038;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .fishing-level-number {
+      display: block;
+      margin-bottom: 20px;
+      color: #d6bd99;
+      font-size: 0.57rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .fishing-level h3 {
+      margin-bottom: 8px;
+      font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+    }
+
+    .fishing-level > p {
+      margin-bottom: 20px;
+      color: rgba(255,255,255,0.68);
+      font-size: 0.88rem;
+    }
+
+    .fishing-spots {
+      border-top: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .fishing-spot {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+    }
+
+    .tiny-fish-note {
+      margin-top: 35px;
+      padding: 20px 22px;
+      border-left: 3px solid #d6bd99;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .tiny-fish-note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #d6bd99;
+      font-size: 0.58rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .tiny-fish-note p {
+      margin: 0;
+      max-width: 750px;
+      color: rgba(255,255,255,0.8);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+    }
+
+    /* LISTS */
+
+    .place-list {
+      border-top: 1px solid rgba(35,48,43,0.17);
+    }
+
+    .place {
+      display: grid;
+      padding: 25px 0;
+      grid-template-columns: 55px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      border-bottom: 1px solid rgba(35,48,43,0.17);
+    }
+
+    .place-number {
+      color: #9a513b;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    .place h3 {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+    }
+
+    .place-note {
+      margin-top: 5px;
+      margin-bottom: 0;
+      color: #64706b;
+      font-size: 0.84rem;
+    }
+
+    .place-tag {
+      padding: 7px 10px;
+      border: 1px solid rgba(154,81,59,0.32);
+      color: #9a513b;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* GOLF */
+
+    .golf-section {
+      padding: 82px 0;
+      background: #a0523a;
+      color: #fffdf8;
+    }
+
+    .golf-section .eyebrow {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .golf-heading {
+      display: grid;
+      margin-bottom: 38px;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 55px;
+      align-items: end;
+    }
+
+    .golf-heading h2 {
+      margin-bottom: 0;
+    }
+
+    .golf-heading > p {
+      max-width: 600px;
+      margin-bottom: 3px;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .golf-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.3);
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .golf-card {
+      padding: 25px 20px;
+      border-right: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .golf-card:last-child {
+      border-right: 0;
+    }
+
+    .golf-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.66);
+      font-size: 0.56rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .golf-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.35rem;
+    }
+
+    .golf-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.8rem;
+    }
+
+    /* DAY TRIPS */
+
+    .trip-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .trip-card {
+      min-height: 220px;
+      padding: 28px;
+      border: 1px solid rgba(35,48,43,0.13);
+      background: #f2ecdf;
+    }
+
+    .trip-card span {
+      display: block;
+      margin-bottom: 28px;
+      color: #9a513b;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .trip-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.65rem;
+    }
+
+    .trip-card p {
+      margin-bottom: 0;
+      color: #4b5752;
+      font-size: 0.88rem;
+    }
+
+    /* CTA */
+
+    .outdoors-cta {
+      padding: 75px 0;
+      background: #203a31;
+      color: #fffdf8;
+      text-align: center;
+    }
+
+    .outdoors-cta-inner {
+      max-width: 720px;
+    }
+
+    .outdoors-cta .eyebrow {
+      color: #d6bd99;
+    }
+
+    .outdoors-cta p:not(.eyebrow) {
+      max-width: 570px;
+      margin: 0 auto 27px;
+      color: rgba(255,255,255,0.76);
+    }
+
+    .outdoors-cta a {
+      display: inline-block;
+      padding: 13px 19px;
+      border: 1px solid rgba(255,255,255,0.65);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .outdoors-hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+      }
+
+      .outdoors-hero-copy {
+        padding: 70px 7vw 55px;
+      }
+
+      .outdoors-hero-image {
+        min-height: 0;
+      }
+
+      .outdoors-hero-image img {
+        height: auto;
+      }
+
+      .section-heading-grid,
+      .fishing-intro,
+      .golf-heading {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .golf-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .golf-card:nth-child(2) {
+        border-right: 0;
+      }
+
+      .golf-card:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .outdoors-hero {
+        padding-top: 70px;
+      }
+
+      .outdoors-hero-copy {
+        padding: 54px 18px 48px;
+      }
+
+      .outdoors-hero h1 {
+        font-size: clamp(3rem, 15vw, 4.5rem);
+      }
+
+      .outdoors-intro,
+      .outdoor-section,
+      .fishing-section,
+      .golf-section {
+        padding: 58px 0;
+      }
+
+      .outdoors-jump {
+        position: static;
+      }
+
+      .fishing-levels,
+      .trip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .place {
+        grid-template-columns: 35px 1fr;
+        gap: 14px;
+      }
+
+      .place-tag {
+        grid-column: 2;
+        width: fit-content;
+      }
+
+      .golf-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .golf-card,
+      .golf-card:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+      }
+
+      .golf-card:last-child {
+        border-bottom: 0;
+      }
+    }
+  </style>
 </head>
 
 <body class="outdoors-page">
 
-<header class="site-header scrolled">
-<a class="brand" href="index.html">
-<span class="brand-name">BJ MAHAR</span>
-<span class="brand-city">COLORADO SPRINGS</span>
-</a>
-<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
-<span></span><span></span><span></span>
-</button>
-<nav id="site-nav" class="site-nav" aria-label="Main navigation">
-<a href="index.html#real-estate">Real Estate</a>
-<a href="index.html#explore">Explore COS</a>
-<a href="index.html#neighborhoods">Neighborhoods</a>
-<a href="resources.html" class="nav-resource">Resources</a>
-<a href="index.html#about">About BJ</a>
-<a href="index.html#contact">Contact</a>
-</nav>
-</header>
+  <header class="site-header scrolled">
+    <a class="brand" href="index.html">
+      <span class="brand-name">BJ MAHAR</span>
+      <span class="brand-city">COLORADO SPRINGS</span>
+    </a>
 
-<main>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-<section class="outdoors-hero">
-<div class="outdoors-hero-copy">
-<p class="eyebrow">BJ'S COLORADO SPRINGS OUTDOOR GUIDE</p>
-<h1>I need to get outside.</h1>
-<p>Fishing, trails, parks, golf and places worth burning a Saturday. These are places I actually go or would send a friend.</p>
-</div>
-<div class="outdoors-hero-image">
-<img src="images/outdoors.jpg" alt="BJ Mahar holding a very small fish on the South Platte River">
-</div>
-</section>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html#real-estate">Real Estate</a>
+      <a href="index.html#explore">Explore COS</a>
+      <a href="index.html#neighborhoods">Neighborhoods</a>
+      <a href="resources.html" class="nav-resource">Resources</a>
+      <a href="index.html#about">About BJ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
 
-<section class="outdoors-intro">
-<div class="section-inner outdoors-intro-inner">
-<p class="eyebrow">PICK YOUR LEVEL OF EFFORT</p>
-<h2>Colorado makes it pretty hard to stay inside.</h2>
-<p>Some days you have two hours. Some days you're willing to disappear into the mountains until dark. This isn't every outdoor destination around Colorado Springs. It's my list.</p>
-</div>
-</section>
+  <main>
 
-<nav class="outdoors-jump" aria-label="Outdoor categories">
-<div class="section-inner outdoors-jump-inner">
-<a href="#fishing">Fishing</a>
-<a href="#hiking">Hiking</a>
-<a href="#parks">Parks</a>
-<a href="#golf">Golf</a>
-<a href="#trips">Get Out of Town</a>
-</div>
-</nav>
+    <!-- HERO -->
+    <section class="outdoors-hero">
+      <div class="outdoors-hero-copy">
+        <p class="eyebrow">BJ'S COLORADO SPRINGS OUTDOOR GUIDE</p>
+        <h1>I need to get outside.</h1>
+        <p>Fishing, trails, parks, golf and places worth burning a Saturday. These are places I actually go or would send a friend.</p>
+      </div>
 
-<section id="fishing" class="fishing-section">
-<div class="section-inner">
-<div class="fishing-intro">
-<div>
-<p class="eyebrow">FISHING</p>
-<h2>How much time do you have?</h2>
-</div>
-<p>Fishing around Colorado Springs is weird. Where I'd send you depends almost entirely on whether you've got two hours or the whole damn day.</p>
-</div>
+      <div class="outdoors-hero-image">
+        <img src="images/outdoors.jpg" alt="BJ Mahar holding a very small fish on the South Platte River">
+      </div>
+    </section>
 
-<div class="fishing-levels">
+    <!-- INTRO -->
+    <section class="outdoors-intro">
+      <div class="section-inner outdoors-intro-inner">
+        <p class="eyebrow">PICK YOUR LEVEL OF EFFORT</p>
+        <h2>Colorado makes it pretty hard to stay inside.</h2>
+        <p>Some days you have two hours. Some days you're willing to disappear into the mountains until dark. This isn't every outdoor destination around Colorado Springs. It's my list.</p>
+      </div>
+    </section>
 
-<article class="fishing-level">
-<span class="fishing-level-number">LEVEL 01 · STAY IN TOWN</span>
-<h3>I've got a couple hours.</h3>
-<p>Grab the rods. Don't overthink it.</p>
-<div class="fishing-spots">
-<div class="fishing-spot">Wolf Lake</div>
-<div class="fishing-spot">Quail Lake</div>
-</div>
-</article>
+    <!-- QUICK NAV -->
+    <nav class="outdoors-jump" aria-label="Outdoor categories">
+      <div class="section-inner outdoors-jump-inner">
+        <a href="#fishing">Fishing</a>
+        <a href="#hiking">Hiking</a>
+        <a href="#parks">Parks</a>
+        <a href="#golf">Golf</a>
+        <a href="#trips">Get Out of Town</a>
+      </div>
+    </nav>
 
-<article class="fishing-level">
-<span class="fishing-level-number">LEVEL 02 · GET OUT OF TOWN</span>
-<h3>Let's find better water.</h3>
-<p>A little driving, but we're not turning this into an expedition.</p>
-<div class="fishing-spots">
-<div class="fishing-spot">Woodland Park Area</div>
-<div class="fishing-spot">South Platte River</div>
-</div>
-</article>
+    <!-- FISHING -->
+    <section id="fishing" class="fishing-section">
+      <div class="section-inner">
+        <div class="fishing-intro">
+          <div>
+            <p class="eyebrow">FISHING</p>
+            <h2>How much time do you have?</h2>
+          </div>
+          <p>Fishing around Colorado Springs is weird. Where I'd send you depends almost entirely on whether you've got two hours or the whole damn day.</p>
+        </div>
 
-<article class="fishing-level">
-<span class="fishing-level-number">LEVEL 03 · MAKE A DAY OF IT</span>
-<h3>Screw it. Let's go fishing.</h3>
-<p>Pack some food, leave early and don't make dinner plans.</p>
-<div class="fishing-spots">
-<div class="fishing-spot">Eleven Mile Reservoir</div>
-<div class="fishing-spot">Eleven Mile Canyon</div>
-<div class="fishing-spot">Tarryall</div>
-</div>
-</article>
+        <div class="fishing-levels">
 
-<article class="fishing-level">
-<span class="fishing-level-number">LEVEL 04 · WORTH THE DRIVE</span>
-<h3>We're committed now.</h3>
-<p>This isn't the quick option. That's the point.</p>
-<div class="fishing-spots">
-<div class="fishing-spot">Taylor Park</div>
-</div>
-</article>
+          <article class="fishing-level">
+            <span class="fishing-level-number">LEVEL 01 · STAY IN TOWN</span>
+            <h3>I've got a couple hours.</h3>
+            <p>Grab the rods. Don't overthink it.</p>
+            <div class="fishing-spots">
+              <div class="fishing-spot">Wolf Lake</div>
+              <div class="fishing-spot">Quail Lake</div>
+            </div>
+          </article>
 
-</div>
+          <article class="fishing-level">
+            <span class="fishing-level-number">LEVEL 02 · GET OUT OF TOWN</span>
+            <h3>Let's find better water.</h3>
+            <p>A little driving, but we're not turning this into an expedition.</p>
+            <div class="fishing-spots">
+              <div class="fishing-spot">Woodland Park Area</div>
+              <div class="fishing-spot">South Platte River</div>
+            </div>
+          </article>
 
-<div class="tiny-fish-note">
-<strong>BJ'S FISHING CREDENTIALS</strong>
-<p>Please refer to the enormous trout I'm holding at the top of this page.</p>
-</div>
-</div>
-</section>
+          <article class="fishing-level">
+            <span class="fishing-level-number">LEVEL 03 · MAKE A DAY OF IT</span>
+            <h3>Screw it. Let's go fishing.</h3>
+            <p>Pack some food, leave early and don't make dinner plans.</p>
+            <div class="fishing-spots">
+              <div class="fishing-spot">Eleven Mile Reservoir</div>
+              <div class="fishing-spot">Eleven Mile Canyon</div>
+              <div class="fishing-spot">Tarryall</div>
+            </div>
+          </article>
 
-<section id="hiking" class="outdoor-section light">
-<div class="section-inner">
-<div class="section-heading-grid">
-<div>
-<p class="eyebrow">HIKING &amp; TRAILS</p>
-<h2>Go walk uphill for fun.</h2>
-</div>
-<p>You don't need to drive three hours into the mountains to find a great trail. Some of my favorites are right here.</p>
-</div>
+          <article class="fishing-level">
+            <span class="fishing-level-number">LEVEL 04 · WORTH THE DRIVE</span>
+            <h3>We're committed now.</h3>
+            <p>This isn't the quick option. That's the point.</p>
+            <div class="fishing-spots">
+              <div class="fishing-spot">Taylor Park</div>
+            </div>
+          </article>
 
-<div class="place-list">
-<article class="place">
-<span class="place-number">01</span>
-<div>
-<h3>Seven Falls / North Cheyenne Cañon Area</h3>
-<p class="place-note">Great trails, canyon scenery and plenty of elevation.</p>
-</div>
-<span class="place-tag">BJ PICK</span>
-</article>
+        </div>
 
-<article class="place">
-<span class="place-number">02</span>
-<div>
-<h3>Section 16</h3>
-<p class="place-note">One of my go-to Colorado Springs trail areas.</p>
-</div>
-</article>
+        <div class="tiny-fish-note">
+          <strong>BJ'S FISHING CREDENTIALS</strong>
+          <p>Please refer to the enormous trout I'm holding at the top of this page.</p>
+        </div>
+      </div>
+    </section>
 
-<article class="place">
-<span class="place-number">03</span>
-<div>
-<h3>Ute Valley Park</h3>
-<p class="place-note">Easy to get to, lots of trail options and classic north-side scenery.</p>
-</div>
-</article>
-</div>
-</div>
-</section>
+    <!-- HIKING -->
+    <section id="hiking" class="outdoor-section light">
+      <div class="section-inner">
+        <div class="section-heading-grid">
+          <div>
+            <p class="eyebrow">HIKING &amp; TRAILS</p>
+            <h2>Go walk uphill for fun.</h2>
+          </div>
+          <p>You don't need to drive three hours into the mountains to find a great trail. Some of my favorites are right here.</p>
+        </div>
 
-<section id="parks" class="outdoor-section tan">
-<div class="section-inner">
-<div class="section-heading-grid">
-<div>
-<p class="eyebrow">PARKS &amp; OPEN SPACE</p>
-<h2>Not everything needs to be a hike.</h2>
-</div>
-<p>Sometimes you just want somewhere beautiful to wander around, take the family or kill an afternoon.</p>
-</div>
+        <div class="place-list">
+          <article class="place">
+            <span class="place-number">01</span>
+            <div>
+              <h3>Seven Falls / North Cheyenne Cañon Area</h3>
+              <p class="place-note">Great trails, canyon scenery and plenty of elevation.</p>
+            </div>
+            <span class="place-tag">BJ PICK</span>
+          </article>
 
-<div class="place-list">
-<article class="place">
-<span class="place-number">01</span>
-<div>
-<h3>Fox Run Regional Park</h3>
-<p class="place-note">Trees, trails and a great place to spend an easy afternoon.</p>
-</div>
-<span class="place-tag">EASY DAY</span>
-</article>
+          <article class="place">
+            <span class="place-number">02</span>
+            <div>
+              <h3>Section 16</h3>
+              <p class="place-note">One of my go-to Colorado Springs trail areas.</p>
+            </div>
+          </article>
 
-<article class="place">
-<span class="place-number">02</span>
-<div>
-<h3>Paint Mines Interpretive Park</h3>
-<p class="place-note">One of the strangest and coolest landscapes near Colorado Springs.</p>
-</div>
-<span class="place-tag">WORTH IT</span>
-</article>
-</div>
-</div>
-</section>
+          <article class="place">
+            <span class="place-number">03</span>
+            <div>
+              <h3>Ute Valley Park</h3>
+              <p class="place-note">Easy to get to, lots of trail options and classic north-side scenery.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="golf" class="golf-section">
-<div class="section-inner">
-<div class="golf-heading">
-<div>
-<p class="eyebrow">G
+    <!-- PARKS -->
+    <section id="parks" class="outdoor-section tan">
+      <div class="section-inner">
+        <div class="section-heading-grid">
+          <div>
+            <p class="eyebrow">PARKS &amp; OPEN SPACE</p>
+            <h2>Not everything needs to be a hike.</h2>
+          </div>
+          <p>Sometimes you just want somewhere beautiful to wander around, take the family or kill an afternoon.</p>
+        </div>
+
+        <div class="place-list">
+          <article class="place">
+            <span class="place-number">01</span>
+            <div>
+              <h3>Fox Run Regional Park</h3>
+              <p class="place-note">Trees, trails and a great place to spend an easy afternoon.</p>
+            </div>
+            <span class="place-tag">EASY DAY</span>
+          </article>
+
+          <article class="place">
+            <span class="place-number">02</span>
+            <div>
+              <h3>Paint Mines Interpretive Park</h3>
+              <p class="place-note">One of the strangest and coolest landscapes near Colorado Springs.</p>
+            </div>
+            <span class="place-tag">WORTH IT</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOLF -->
+    <section id="golf" class="golf-section">
+      <div class="section-inner">
+        <div class="golf-heading">
+          <div>
+            <p class="eyebrow">GOLF</p>
+            <h2>Let's ruin a perfectly good afternoon.</h2>
+          </div>
+          <p>I'm not promising you'll play well. I'm just telling you where I'd tee it up.</p>
+        </div>
+
+        <div class="golf-grid">
+          <article class="golf-card">
+            <span>BJ'S HOME COURSE</span>
+            <h3>Patty Jewett</h3>
+            <p>This is home base.</p>
+          </article>
+
+          <article class="golf-card">
+            <span>GOLF</span>
+            <h3>Pine Creek</h3>
+            <p>Another one on my Colorado Springs list.</p>
+          </article>
+
+          <article class="golf-card">
+            <span>GOLF</span>
+            <h3>Valley Hi</h3>
+            <p>City golf and a solid option for getting a round in.</p>
+          </article>
+
+          <article class="golf-card">
+            <span>GOLF + PRACTICE</span>
+            <h3>World Golf &amp; Sand Creek</h3>
+            <p>Good option when you're looking for something a little different.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAY TRIPS -->
+    <section id="trips" class="outdoor-section light">
+      <div class="section-inner">
+        <div class="section-heading-grid">
+          <div>
+            <p class="eyebrow">GET OUT OF TOWN</p>
+            <h2>We've got a free Saturday.</h2>
+          </div>
+          <p>Colorado Springs is home, but sometimes the right move is getting in the car and disappearing for the day.</p>
+        </div>
+
+        <div class="trip-grid">
+          <article class="trip-card">
+            <span>ROAD TRIP</span>
+            <h3>Buena Vista</h3>
+            <p>Mountains, river, food and plenty of reasons to burn an entire Saturday.</p>
+          </article>
+
+          <article class="trip-card">
+            <span>ROAD TRIP</span>
+            <h3>Leadville</h3>
+            <p>High elevation, old Colorado and a town that still feels like somewhere.</p>
+          </article>
+
+          <article class="trip-card">
+            <span>ROAD TRIP</span>
+            <h3>Trinidad</h3>
+            <p>Head south, explore town and make a day out of it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="outdoors-cta">
+      <div class="section-inner outdoors-cta-inner">
+        <p class="eyebrow">NEED ANOTHER IDEA?</p>
+        <h2>Ask a local.</h2>
+        <p>Fishing question, trail question, neighborhood question or house question — I'm pretty easy to find.</p>
+        <a href="index.html#contact">Contact BJ</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <strong>BJ MAHAR</strong>
+      <span>COLORADO SPRINGS</span>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#real-estate">Real Estate</a>
+      <a href="Food.html">Food</a>
+      <a href="outdoors.html">Outdoors</a>
+      <a href="resources.html">Resources</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-legal">
+      <img
+        src="images/homesiq%20logo.webp"
+        alt="HomesIQ"
+        style="width:auto;max-width:130px;max-height:48px;margin-left:auto;margin-bottom:12px;object-fit:contain;"
+      >
+      <p>BJ Mahar · Broker Associate · HomesIQ</p>
+      <p>719-650-4672 · bj@movewithiq.com</p>
+      <p>© <span id="year"></span> BJ Mahar.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
