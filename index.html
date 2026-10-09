@@ -41,13 +41,25 @@
   outline-offset: 4px;
 }
 
-/* Keep anchored headings visible below the site navigation */
+/* Keep anchored headings visible below navigation */
 html {
   scroll-padding-top: 85px;
 }
 #intro, #real-estate, #explore, #neighborhoods,
 #resources, #about, #contact {
   scroll-margin-top: 85px;
+}
+
+/* Mobile-only intro heading fix */
+@media (max-width: 700px) {
+  .intro-section .section-title {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+    line-height: 1.1;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    margin-left: 0;
+    transform: none;
+  }
 }
 </style>
 </head>
