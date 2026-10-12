@@ -1,1 +1,315 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Real questions and straight answers about buying and selling homes in Colorado Springs from BJ Mahar, Broker Associate at HomesIQ.">
+  <title>Let's Talk Houses | BJ Mahar | Colorado Springs Real Estate</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --forest: #23483c;
+      --cream: #f7f3e9;
+      --rust: #ad6247;
+      --gold: #c5a46a;
+      --ink: #27372e;
+    }
+    .houses-page {
+      background: var(--cream);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+    .houses-topbar {
+      background: var(--forest);
+      color: white;
+      padding: 17px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .houses-topbar a { color: white; text-decoration: none; }
+    .houses-brand { font-size: 1.2rem; font-weight: 800; letter-spacing: .04em; }
+    .houses-back { font-size: .9rem; }
+    .houses-hero {
+      text-align: center;
+      padding: 75px 20px 55px;
+      background: var(--forest);
+      color: white;
+    }
+    .houses-eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .houses-hero h1 {
+      color: white;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.08;
+      margin: 15px 0;
+    }
+    .houses-hero p {
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .houses-main {
+      max-width: 1250px;
+      margin: auto;
+      padding: 65px 22px;
+    }
+    .houses-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+    .houses-panel {
+      background: white;
+      border: 1px solid #e4ded1;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0,0,0,.055);
+    }
+    .houses-panel-header {
+      padding: 35px 30px;
+      background: #e9e4d7;
+    }
+    .houses-panel.selling .houses-panel-header {
+      background: #e8d7cc;
+    }
+    .houses-panel-header .houses-icon { font-size: 2.4rem; }
+    .houses-panel-header h2 {
+      color: var(--forest);
+      font-size: clamp(1.65rem, 3vw, 2.3rem);
+      margin: 12px 0 8px;
+    }
+    .houses-panel-header p { margin: 0; line-height: 1.5; }
+    .houses-questions { padding: 12px 25px 25px; }
+    .houses-questions details {
+      border-bottom: 1px solid #e5e0d6;
+    }
+    .houses-questions details:last-child { border-bottom: 0; }
+    .houses-questions summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 21px 27px 21px 4px;
+      font-weight: 700;
+      line-height: 1.45;
+      position: relative;
+      color: var(--forest);
+    }
+    .houses-questions summary::-webkit-details-marker { display: none; }
+    .houses-questions summary::after {
+      content: "+";
+      position: absolute;
+      right: 3px;
+      top: 18px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--rust);
+    }
+    .houses-questions details[open] summary::after { content: "−"; }
+    .houses-answer {
+      padding: 0 4px 22px;
+      line-height: 1.75;
+      font-size: .98rem;
+    }
+    .houses-answer p { margin: 0; }
+    .houses-cta {
+      text-align: center;
+      margin-top: 55px;
+      padding: 55px 25px;
+      background: var(--forest);
+      color: white;
+      border-radius: 16px;
+    }
+    .houses-cta h2 {
+      color: white;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      margin: 0 0 15px;
+    }
+    .houses-cta p { max-width: 560px; margin: 0 auto 25px; line-height: 1.7; }
+    .houses-button {
+      display: inline-block;
+      background: var(--gold);
+      color: #192c23;
+      padding: 15px 28px;
+      border-radius: 7px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .houses-footer {
+      text-align: center;
+      padding: 30px 15px;
+      font-size: .85rem;
+      color: #59655e;
+    }
+    @media (max-width: 760px) {
+      .houses-grid { grid-template-columns: 1fr; }
+      .houses-main { padding: 35px 14px; }
+      .houses-hero { padding: 55px 20px 45px; }
+      .houses-panel-header { padding: 27px 22px; }
+      .houses-questions { padding: 8px 19px 19px; }
+      .houses-topbar { padding: 15px 18px; }
+    }
+  </style>
+</head>
+<body class="houses-page">
+
+  <header class="houses-topbar">
+    <a class="houses-brand" href="index.html">BJ MAHAR</a>
+    <a class="houses-back" href="index.html">← Back to Home</a>
+  </header>
+
+  <section class="houses-hero">
+    <div class="houses-eyebrow">Colorado Springs Real Estate</div>
+    <h1>Let's Talk Houses.</h1>
+    <p>Real questions. Straight answers. No sales pitch. Find the question that's been on your mind.</p>
+  </section>
+
+  <main class="houses-main">
+    <div class="houses-grid">
+
+      <section class="houses-panel">
+        <div class="houses-panel-header">
+          <div class="houses-icon">🔑</div>
+          <h2>Getting the Keys</h2>
+          <p>Finding your next place? Let's talk about it.</p>
+        </div>
+        <div class="houses-questions">
+
+          <details>
+            <summary>Can I buy a house without 20% down?</summary>
+            <div class="houses-answer"><p>Absolutely! There are loan programs requiring as little as 0–3.5% down. The real question isn't how much money you have saved. It's which financing options make the most sense for your situation. You might be closer to owning a home than you think.</p></div>
+          </details>
+
+          <details>
+            <summary>Should I wait for interest rates to drop before buying?</summary>
+            <div class="houses-answer"><p>Waiting for lower rates sounds like a great plan, but there's a catch. When rates fall, more buyers often enter the market, creating competition and potentially driving prices higher. <strong>In real estate, waiting is rarely the best strategy.</strong> The key is knowing when the numbers make sense for you.</p></div>
+          </details>
+
+          <details>
+            <summary>What happens if the home inspection finds problems?</summary>
+            <div class="houses-answer"><p>First, don't panic. Almost every house has something wrong with it, even brand-new ones. The important thing isn't finding a perfect house. It's understanding which problems are minor, which are negotiable, and which might be deal-breakers. That's where having the right representation really matters.</p></div>
+          </details>
+
+          <details>
+            <summary>How much house can I actually afford?</summary>
+            <div class="houses-answer"><p>There's a difference between what a lender says you can afford and what makes sense for your future. Sometimes stretching your budget today can create opportunities tomorrow as you build equity and your income grows. Other times, it's a recipe for financial stress. The trick is knowing the difference.</p></div>
+          </details>
+
+          <details>
+            <summary>Do I really need a real estate agent to buy a house?</summary>
+            <div class="houses-answer"><p>Nope! You can also cut your own hair, fix your own transmission, and represent yourself in court. Just because you <em>can</em> doesn't mean you <em>should</em>. Buying a house is a pretty expensive place to learn that lesson.</p></div>
+          </details>
+
+          <details>
+            <summary>How long does it actually take to buy a house?</summary>
+            <div class="houses-answer"><p>Finding the right house could take a weekend or six months. Once you're under contract, closing typically takes around 30–45 days. The trick isn't rushing the process. It's being ready when the right opportunity comes along.</p></div>
+          </details>
+
+          <details>
+            <summary>What if I find a house I love, but it's overpriced?</summary>
+            <div class="houses-answer"><p>Just because someone thinks their house is worth a million bucks doesn't mean the rest of us have to agree. I've seen some asking prices that make me wonder if the furniture comes stuffed with cash. But here's the thing: an overpriced house isn't necessarily a bad opportunity. Sometimes it's just a good house with a seller who needs a reality check. Knowing how to navigate that conversation? That's where I come in.</p></div>
+          </details>
+
+          <details>
+            <summary>Should I buy a fixer-upper or a move-in-ready home?</summary>
+            <div class="houses-answer"><p>Everybody wants a fixer-upper until they discover HGTV conveniently skips the part where you're crying in the Home Depot parking lot. But don't let ugly scare you! Some of the best opportunities I've seen are houses nobody else wanted to look at. There's a big difference between a diamond in the rough and a dumpster fire with granite countertops. Knowing which one you're buying is where I come in.</p></div>
+          </details>
+
+          <details>
+            <summary>What if I find my dream home but haven't sold my current house?</summary>
+            <div class="houses-answer"><p>Ah, the classic real estate chicken-or-the-egg problem! Do you sell first and risk having nowhere to go, or buy first and risk owning two houses? Neither sounds particularly relaxing. Fortunately, there are ways to coordinate both transactions without losing your mind—or your dream home. And I can almost guarantee there are a few plays in the real estate playbook you don't even know exist. That's where I come in. I'll walk you through your options and help you put together a winning game plan.</p></div>
+          </details>
+
+          <details>
+            <summary>Can I negotiate more than just the price of a house?</summary>
+            <div class="houses-answer"><p>Oh, absolutely! Price is just one piece of the puzzle. Closing costs, repairs, interest rate buydowns, timelines, and even that fancy refrigerator can all become part of the conversation. Sometimes the best deal isn't the one with the lowest price tag. It's the one where you walk away with the most value. And trust me, I love getting creative at the negotiating table.</p></div>
+          </details>
+
+        </div>
+      </section>
+
+      <section class="houses-panel selling">
+        <div class="houses-panel-header">
+          <div class="houses-icon">🏡</div>
+          <h2>Passing the Keys</h2>
+          <p>Thinking about your next chapter? Start here.</p>
+        </div>
+        <div class="houses-questions">
+
+          <details>
+            <summary>What's my house actually worth?</summary>
+            <div class="houses-answer"><p>Well, Zillow has an opinion. Your neighbor has an opinion. And that guy down the street who sold his house three years ago definitely has an opinion. But opinions don't sell houses. The market does. Figuring out what your home is actually worth takes more than plugging an address into a website. That's where experience, local knowledge, and a little strategy come into play.</p></div>
+          </details>
+
+          <details>
+            <summary>Should I renovate my house before putting it on the market?</summary>
+            <div class="houses-answer"><p>Short answer? No. At least not yet! Buyers are looking for certain things, and not every repair or upgrade is going to earn its money back. Before you spend a dime, let's evaluate what actually needs attention, what buyers will care about, and what's worth leaving alone. <strong>The goal isn't to spend money making your house better. It's to make more money selling it.</strong></p></div>
+          </details>
+
+          <details>
+            <summary>Should I price my house high to leave room for negotiation?</summary>
+            <div class="houses-answer"><p>Ah, the old “let's price it high and see what happens” strategy. Sounds reasonable, right? Here's the problem: people shopping for homes are doing their homework, and overpriced houses have a funny way of sitting on the market. The longer they sit, the more people wonder what's wrong with them. <strong>The goal isn't to leave room for negotiation. It's to create a reason for people to compete for your home.</strong></p></div>
+          </details>
+
+          <details>
+            <summary>What if my house doesn't sell?</summary>
+            <div class="houses-answer"><p>Every home can sell. Sometimes it just takes longer than expected, and sometimes the price isn't what you hoped for. But here's a question worth asking: <strong>Was your home a good investment?</strong> Think about the years you enjoyed living there, the equity you've built, and what you're walking away with. A successful sale isn't always about getting the price you imagined. It's about understanding the bigger picture.</p></div>
+          </details>
+
+          <details>
+            <summary>Do I really need a real estate agent to sell my house?</summary>
+            <div class="houses-answer"><p>Nope! I could probably do my own dental work, too. I've got a mirror, some pliers, and YouTube. What could possibly go wrong? Real estate is complicated, and the expensive mistakes aren't always obvious until it's too late. <strong>Experience matters.</strong> Knowing how to navigate contracts, negotiations, and unexpected problems can be the difference between a smooth closing and a very expensive headache.</p></div>
+          </details>
+
+          <details>
+            <summary>How much will it actually cost to sell my house?</summary>
+            <div class="houses-answer"><p>Probably less than you're worried about, but maybe more than you're expecting! Between commissions, closing costs, concessions, and mortgage payoffs, there are a few moving parts. The number that really matters isn't what your house sells for. <strong>It's how much money ends up in your pocket when the dust settles.</strong> That's the number I want you focused on.</p></div>
+          </details>
+
+          <details>
+            <summary>Should I sell my house as-is or make repairs first?</summary>
+            <div class="houses-answer"><p>Selling your house as-is doesn't mean giving it away! Some repairs simply aren't worth the money, while certain health and safety issues may need attention before a sale can move forward. <strong>This is something we need to navigate together.</strong> Let's figure out what actually needs fixing, what can be negotiated, and what makes the most financial sense. The goal is to protect your investment, not spend money unnecessarily.</p></div>
+          </details>
+
+          <details>
+            <summary>When is the best time of year to sell my house?</summary>
+            <div class="houses-answer"><p><strong>Sell when you need to sell.</strong> Everyone talks about spring being the perfect time, but here's the catch: more people looking also means more homes competing for their attention. Every season presents opportunities. As I always say, <strong>in real estate, waiting is rarely the best strategy.</strong> The key isn't finding the perfect month. It's having the right strategy for the market you're selling in.</p></div>
+          </details>
+
+          <details>
+            <summary>How will you market my property to prospective buyers?</summary>
+            <div class="houses-answer"><p>Putting a sign in the yard and uploading some pictures to the MLS isn't a marketing strategy. It's the bare minimum. Your home deserves professional presentation, maximum exposure, and a plan designed to attract the right people. <strong>I don't just want people to see your house. I want them to want your house.</strong> And there's a big difference.</p></div>
+          </details>
+
+          <details>
+            <summary>What makes your approach different from other real estate agents?</summary>
+            <div class="houses-answer"><p>I'm not interested in being another guy with a headshot on a business card telling you how great I am. I know Colorado Springs, I know real estate, and I believe you deserve straight answers—even when they're not what you want to hear. <strong>My job isn't to tell you what you want to hear. It's to help you make decisions you'll be happy with long after the moving truck leaves.</strong></p></div>
+          </details>
+
+        </div>
+      </section>
+
+    </div>
+
+    <section class="houses-cta">
+      <h2>Didn't See Your Question?</h2>
+      <p>Every real estate situation is a little different. Tell me what's on your mind, and let's figure out your next move together.</p>
+      <a class="houses-button" href="index.html#contact">Let's Talk →</a>
+    </section>
+  </main>
+
+  <footer class="houses-footer">
+    BJ Mahar · Broker Associate · HomesIQ · Colorado Springs, Colorado<br>
+    719-650-4672 · bj@movewithiq.com
+  </footer>
+
+</body>
+</html>
