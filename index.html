@@ -26,6 +26,7 @@
 <meta name="twitter:image" content="https://bjmahar.com/images/heroshot.png">
 
 <style>
+/* Explore card links */
 .explore-card-link {
   display: block;
   color: inherit;
@@ -45,17 +46,47 @@
   outline-offset: 4px;
 }
 
-/* Keep anchored headings visible below navigation */
+/* Keep anchor targets visible below navigation */
 html {
   scroll-padding-top: 85px;
 }
 
-#intro, #real-estate, #explore, #neighborhoods,
-#resources, #about, #contact {
+#intro,
+#real-estate,
+#explore,
+#neighborhoods,
+#resources,
+#about,
+#contact {
   scroll-margin-top: 85px;
 }
 
-/* Mobile-only intro heading fix */
+/* FIX: Center the homepage introduction on desktop */
+@media (min-width: 701px) {
+  .intro-section .intro-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-section .section-title {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+    text-align: center;
+  }
+
+  .intro-section .intro-copy {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/* Mobile introduction */
 @media (max-width: 700px) {
   .intro-section .section-title {
     font-size: clamp(2.4rem, 10vw, 3.5rem);
@@ -67,7 +98,7 @@ html {
   }
 }
 
-/* About BJ: five-photo personality collage */
+/* About BJ photo collage */
 .about-image.bj-collage {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -163,7 +194,8 @@ html {
     <span class="brand-city">COLORADO SPRINGS</span>
   </a>
 
-  <button class="menu-toggle"
+  <button
+    class="menu-toggle"
     aria-label="Open navigation"
     aria-expanded="false"
     aria-controls="site-nav">
@@ -186,7 +218,8 @@ html {
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-image"
+  <img
+    class="hero-image"
     src="images/heroshot.png"
     alt="BJ Mahar overlooking Colorado Springs and Pikes Peak">
 
@@ -201,11 +234,14 @@ html {
 <!-- INTRO -->
 <section id="intro" class="intro-section">
   <div class="section-inner intro-inner">
-    <p class="eyebrow">REAL ESTATE. FOOD. TRAILS. HISTORY. HOME.</p>
+    <p class="eyebrow">
+      REAL ESTATE. FOOD. TRAILS. HISTORY. HOME.
+    </p>
+
     <h1 class="section-title">So, what brought you here?</h1>
+
     <p class="intro-copy">
-      Buying a house? Selling one?
-      Trying to figure out where to eat?
+      Buying a house? Selling one? Trying to figure out where to eat?
       Looking for somebody who actually knows Colorado Springs?
       Start wherever you want.
     </p>
@@ -225,9 +261,11 @@ html {
 
       <article class="real-estate-card">
         <div class="real-estate-image">
-          <img src="images/buying.jpg"
+          <img
+            src="images/buying.jpg"
             alt="Colorado Springs neighborhood">
         </div>
+
         <div class="card-copy">
           <p class="eyebrow">BUYING</p>
           <h3>I'm thinking about buying a home.</h3>
@@ -241,9 +279,11 @@ html {
 
       <article class="real-estate-card">
         <div class="real-estate-image">
-          <img src="images/selling.jpg"
+          <img
+            src="images/selling.jpg"
             alt="Home for sale in Colorado Springs">
         </div>
+
         <div class="card-copy">
           <p class="eyebrow">SELLING</p>
           <h3>What's my house actually worth?</h3>
@@ -274,10 +314,14 @@ html {
 
     <div class="explore-grid">
 
-      <a href="Food.html" class="explore-card-link"
+      <!-- FOOD -->
+      <a
+        href="Food.html"
+        class="explore-card-link"
         aria-label="Explore BJ's Colorado Springs food guide">
         <div class="explore-card">
-          <img src="images/food-guide.jpg"
+          <img
+            src="images/food-guide.jpg"
             alt="BJ Mahar enjoying tacos at a Colorado Springs style bar">
           <div class="explore-label">
             <span>FOOD</span>
@@ -286,10 +330,14 @@ html {
         </div>
       </a>
 
-      <a href="outdoors.html" class="explore-card-link"
+      <!-- OUTDOORS -->
+      <a
+        href="outdoors.html"
+        class="explore-card-link"
         aria-label="Explore BJ's Colorado Springs outdoor guide">
         <div class="explore-card">
-          <img src="images/outdoors.jpg"
+          <img
+            src="images/outdoors.jpg"
             alt="BJ Mahar fishing along the South Platte River">
           <div class="explore-label">
             <span>OUTDOORS</span>
@@ -298,10 +346,14 @@ html {
         </div>
       </a>
 
-      <a href="history.html" class="explore-card-link"
+      <!-- HISTORY -->
+      <a
+        href="history.html"
+        class="explore-card-link"
         aria-label="Explore Colorado Springs history">
         <div class="explore-card">
-          <img src="images/history.jpg"
+          <img
+            src="images/history.jpg"
             alt="Historic and modern Colorado Springs">
           <div class="explore-label">
             <span>HISTORY</span>
@@ -363,9 +415,9 @@ html {
       </p>
       <h2>I just need to know who to call.</h2>
       <p>
-        GIS maps. Planning. Property records.
-        Taxes. Mining maps. Historic research.
-        Inspectors. Contractors. City and county resources —
+        GIS maps. Planning. Property records. Taxes.
+        Mining maps. Historic research. Inspectors.
+        Contractors. City and county resources —
         and the other stuff nobody tells you about until you need it.
       </p>
     </div>
@@ -384,31 +436,45 @@ html {
 <!-- ABOUT BJ -->
 <section id="about" class="about-section">
 
-  <div class="about-image bj-collage" aria-label="Photos of BJ enjoying Colorado, family, food, and everyday life">
+  <div
+    class="about-image bj-collage"
+    aria-label="Photos of BJ enjoying Colorado, family, food, and everyday life">
+
     <div class="bj-photo bj-photo--binoculars">
-      <img src="images/binoculars.jpg"
-        alt="BJ enjoying a colorful Colorado autumn day" loading="lazy">
+      <img
+        src="images/binoculars.jpg"
+        alt="BJ enjoying a colorful Colorado autumn day"
+        loading="lazy">
     </div>
 
     <div class="bj-photo bj-photo--family">
-      <img src="images/family.jpg"
-        alt="BJ and family at Casa Bonita" loading="lazy">
+      <img
+        src="images/family.jpg"
+        alt="BJ and family at Casa Bonita"
+        loading="lazy">
     </div>
 
     <div class="bj-photo bj-photo--fishing">
-      <img src="images/fishing.jpg"
-        alt="BJ beside a Colorado river" loading="lazy">
+      <img
+        src="images/fishing.jpg"
+        alt="BJ beside a Colorado river"
+        loading="lazy">
     </div>
 
     <div class="bj-photo bj-photo--food">
-      <img src="images/food.jpg"
-        alt="BJ ready to enjoy an enormous dessert" loading="lazy">
+      <img
+        src="images/food.jpg"
+        alt="BJ ready to enjoy an enormous dessert"
+        loading="lazy">
     </div>
 
     <div class="bj-photo bj-photo--toilet">
-      <img src="images/toilet.jpg"
-        alt="BJ bringing his sense of humor to a home visit" loading="lazy">
+      <img
+        src="images/toilet.jpg"
+        alt="BJ bringing his sense of humor to a home visit"
+        loading="lazy">
     </div>
+
   </div>
 
   <div class="about-copy">
@@ -475,6 +541,7 @@ html {
         <strong>BJ Mahar</strong><br>
         Broker Associate · HomesIQ
       </p>
+
       <p>
         <a href="tel:+17196504672">719-650-4672</a><br>
         <a href="mailto:bj@movewithiq.com">bj@movewithiq.com</a>
